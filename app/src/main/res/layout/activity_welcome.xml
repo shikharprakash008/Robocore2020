@@ -30,7 +30,7 @@
         android:layout_marginEnd="113dp"
         android:layout_marginRight="113dp"
         android:layout_marginBottom="284dp"
-        android:texrSize="100sp"
+
         android:text="CORSIT"
         android:textColor="#fff"
         android:textSize="36sp" />
