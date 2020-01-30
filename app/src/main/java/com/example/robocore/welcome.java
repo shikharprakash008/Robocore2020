@@ -2,7 +2,11 @@ package com.example.robocore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -28,6 +32,24 @@ public class welcome extends AppCompatActivity {
         imageview.startAnimation(smalltobig);
         textview.startAnimation(nothingtocome);
         btn.startAnimation(btnanim);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openwelcome2();
+            }
+        });
+
 
     }
+
+    public void openwelcome2(){
+        Intent intent = new Intent(this,welcome2.class);
+        startActivity(intent);
+
+
+
+    }
+
+
+
 }
