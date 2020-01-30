@@ -24,7 +24,7 @@ public class welcome extends AppCompatActivity {
         btnanim=AnimationUtils.loadAnimation(this,R.anim.btnanim);
         imageview=findViewById(R.id.imageview);
         textview=findViewById(R.id.textview);
-        btn=findViewById(R.id.btn);
+        btn=findViewById(R.id.btn2);
         imageview.startAnimation(smalltobig);
         textview.startAnimation(nothingtocome);
         btn.startAnimation(btnanim);
