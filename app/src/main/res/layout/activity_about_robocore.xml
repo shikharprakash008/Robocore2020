@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AboutRobocore"
     android:background="#ffffff">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
 
         <LinearLayout
             android:elevation="10dp"
@@ -114,8 +110,6 @@ Siddaganga Institute Of Technology presents to you an anthralling and amplified 
             android:layout_centerHorizontal="true"
             android:layout_marginStart="66dp"
             android:layout_marginLeft="66dp"
-            android:layout_marginBottom="57dp" />
-
-    </ScrollView>
+            android:layout_marginBottom="57dp"/>
 
 </RelativeLayout>
