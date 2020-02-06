@@ -1,7 +1,5 @@
 package com.example.robocore;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -9,6 +7,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class splashscreen extends AppCompatActivity {
 
@@ -29,7 +29,7 @@ public class splashscreen extends AppCompatActivity {
         image.setAnimation(topanim);
         logo.setAnimation(bottomanim);
         progress.setAnimation(bottomanim);
-        final Intent intent = new Intent(this,introActivity.class);
+        final Intent intent = new Intent(this,NavigationDrawer.class);
 Thread timer = new Thread(){
     public void run(){
         try{

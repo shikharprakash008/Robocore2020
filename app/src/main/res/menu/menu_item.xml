@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/corsit"
+            android:icon="@drawable/about"
+            android:title="Corsit"
+
+            />
+        <item
+            android:id="@+id/robocore"
+            android:icon="@drawable/robo_icon"
+            android:title="Robocore 2K19" />
+        <item
+            android:id="@+id/events"
+            android:icon="@drawable/eventsone"
+            android:title="Events"/>
+
+
+
+
+        <item
+            android:id="@+id/team"
+            android:icon="@drawable/group"
+            android:title="The Team"
+
+            />
+        <item
+            android:id="@+id/sponsors"
+            android:icon="@drawable/sponsor"
+            android:title="Sponsors"
+
+            />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/contact"
+                android:icon="@drawable/contact"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/Location"
+                android:icon="@drawable/placeholder"
+                android:title="Location" />
+
+        </menu>
+    </item>
+
+</menu>

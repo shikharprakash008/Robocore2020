@@ -12,8 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntroViewPageAdapter"></activity>
-        <activity android:name=".introActivity" />
+        <activity android:name=".ConatactUs"></activity>
+        <activity android:name=".sponsors" />
+        <activity android:name=".Team" />
+        <activity android:name=".Events" />
+        <activity android:name=".AboutRobocore" />
+        <activity android:name=".AboutCorsit" />
+        <activity android:name=".NavigationDrawer" />
         <activity android:name=".splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
