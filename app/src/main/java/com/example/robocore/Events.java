@@ -49,7 +49,7 @@ public class Events extends AppCompatActivity {
 
             private void nextActivity() {
 
-                if()
+
 
             }
         });
