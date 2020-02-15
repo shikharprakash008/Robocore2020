@@ -1,15 +1,12 @@
 package com.example.robocore;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +25,7 @@ private TextView register;
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back= new Intent(MainActivity.this,welcome.class);
+                Intent back= new Intent(MainActivity.this,NavigationDrawer.class);
                 startActivity(back);
                 finish();
             }

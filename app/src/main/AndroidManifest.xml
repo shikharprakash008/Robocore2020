@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ConatactUs"></activity>
         <activity android:name=".sponsors" />
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".Team" />
         <activity android:name=".Events" />
         <activity android:name=".AboutRobocore" />
@@ -26,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".welcome" />
         <activity android:name=".MainActivity" />
     </application>
 

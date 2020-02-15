@@ -37,10 +37,11 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.drawerOpen,R.string.drawerClose);
+        toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         initImageBitmaps();
+        navigationView.setNavigationItemSelectedListener(this);
 
         /*videoView = findViewById(R.id.mVideoView);
         setSupportActionBar(toolbar);

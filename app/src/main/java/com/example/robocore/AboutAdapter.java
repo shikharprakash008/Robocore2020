@@ -16,14 +16,15 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdapter.ViewHolder>{
-    private static final String TAG ="RecyclerViewAdapter";
+import static androidx.constraintlayout.widget.Constraints.TAG;
+
+public class AboutAdapter extends RecyclerView.Adapter<AboutAdapter.ViewHolder>{
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageUrls=new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> mNames, ArrayList<Integer> mImageUrls) {
+    public AboutAdapter(Context context, ArrayList<String> mNames, ArrayList<Integer> mImageUrls) {
         this.mNames = mNames;
         this.mImageUrls = mImageUrls;
         this.mContext = context;
@@ -31,14 +32,14 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AboutAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
-        return new ViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_corsit_img,parent,false);
+        return new AboutAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull AboutAdapter.ViewHolder holder, final int position) {
         Log.d(TAG ,"onCreateViewHolder:called.");
         Glide.with(mContext)
                 .asBitmap()
@@ -49,7 +50,7 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
                 Log.d(TAG,"onClick:clicked on an image:"+mNames.get(position));
                 Toast.makeText(mContext,mNames.get(position),Toast.LENGTH_SHORT).show();
             }
@@ -76,6 +77,4 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
     }
 
 
-
-    }
-
+}

@@ -29,7 +29,7 @@ public class splashscreen extends AppCompatActivity {
         image.setAnimation(topanim);
         logo.setAnimation(bottomanim);
         progress.setAnimation(bottomanim);
-        final Intent intent = new Intent(this,NavigationDrawer.class);
+        final Intent intent = new Intent(this,WelcomeActivity.class);
 Thread timer = new Thread(){
     public void run(){
         try{
