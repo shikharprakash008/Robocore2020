@@ -4,51 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".AboutCorsit">
-
+    tools:context=".AboutCorsit"
+    android:background="#ffffff">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/graylight">
+    <LinearLayout
+        android:gravity="start"
+        android:id="@+id/tileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/tileLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="start"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"
-                android:src="@drawable/left"
-                app:srcCompat="@drawable/left" />
-
-
-            <TextView
-                android:id="@+id/id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/aldrich"
-                android:text="About Corsit"
-                android:textAllCaps="true"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left"
+            app:srcCompat="@drawable/left"/>
 
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/id"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Corsit"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="@font/aldrich" />
+
+
+    </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/main"
@@ -57,65 +55,66 @@
         android:layout_marginTop="60dp">
 
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="About Corsit"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:text="CORSIT is the premier robotics club of SIT, under the patronage of e-yantra cell of IIT Bombay working in the field of robotics to bring together like-minded individuals to share experience and have fun building robots. The club was established in year 2006 and since then it has organized various national level workshops as well as participated in various national level events. Our aim is to empower students with the possibility of getting their hands dirty and learning about robotics by practically doing it. It officially controls all the robotics activities carried out by SIT. Our Club members have actively participated in techfests all round the country including Techfest IIT Bombay, Kshitij IIT Kharagpur, Shastra IIT Madras, Pravega IISC among many others and have brought laurels to the club.
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Corsit"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/text1"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CORSIT is the premier robotics club of SIT, under the patronage of e-yantra cell of IIT Bombay working in the field of robotics to bring together like-minded individuals to share experience and have fun building robots. The club was established in year 2006 and since then it has organized various national level workshops as well as participated in various national level events. Our aim is to empower students with the possibility of getting their hands dirty and learning about robotics by practically doing it. It officially controls all the robotics activities carried out by SIT. Our Club members have actively participated in techfests all round the country including Techfest IIT Bombay, Kshitij IIT Kharagpur, Shastra IIT Madras, Pravega IISC among many others and have brought laurels to the club.
 
 Our club is the only one to have our labs set-up in collaboration with e-yantra cell of IIT Bombay in which our members build robots and projects on diverse topics including Machine Learning, Computer Vision, IOT, Embedded Systems, Blockchain among others."
 
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/prob_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text1"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Our Activities"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        >
-    </RelativeLayout>
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:id="@+id/mainLayout"
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/prob_desc"
+        android:layout_below="@id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main">
+        android:text="Our Activities"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+        >
+</RelativeLayout>
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_below="@+id/main"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/graylight"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_gravity="start"
             android:layout_marginTop="15dp"
-            android:background="@color/graylight"
-            android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+            android:orientation="horizontal">
+        </androidx.recyclerview.widget.RecyclerView>
     </RelativeLayout>
+
+
 
 
 </RelativeLayout>

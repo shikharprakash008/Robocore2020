@@ -43,4 +43,9 @@ dependencies {
 //count down
     implementation 'com.github.iwgang:countdownview:2.1.6'
 
+ //   justified text
+
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+
+
 }
