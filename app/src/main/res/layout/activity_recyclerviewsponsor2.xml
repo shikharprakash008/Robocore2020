@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sponsors">
+    android:orientation="vertical"
+    tools:context=".recyclerviewsponsor2">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -22,42 +24,41 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/backspn"
+                android:id="@+id/back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"
                 android:src="@drawable/backsponser"
-                 />
+
+                />
 
 
             <TextView
                 android:id="@+id/spn2"
                 android:layout_width="wrap_content"
-
-                android:layout_height="35dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/aldrich"
                 android:text="SPONSERS"
                 android:textAllCaps="true"
                 android:textColor="#fff"
-                android:textSize="24sp"
-                />
+                android:textSize="24sp" />
 
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_below="@+id/toolbar"
-    android:id="@+id/recycler_sponsor"
-    android:background="#dddddd"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layoutAnimation="@anim/layout_animation_slide_right"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        >
 
 
+    </androidx.recyclerview.widget.RecyclerView>
 
-
-</RelativeLayout>
+</LinearLayout>

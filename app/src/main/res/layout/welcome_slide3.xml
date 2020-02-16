@@ -21,8 +21,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="   D-CODE and PAPER
-       PRESENTATION"
+            android:text="   D-CODE and "
+            android:fontFamily="@font/aldrich"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  PAPER "
+            android:fontFamily="@font/aldrich"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRESENTATION "
+            android:fontFamily="@font/aldrich"
             android:textColor="@android:color/white"
             android:textSize="40sp"
             android:textStyle="bold" />
