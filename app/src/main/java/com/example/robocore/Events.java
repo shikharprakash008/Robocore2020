@@ -1,6 +1,7 @@
 package com.example.robocore;
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,9 +48,9 @@ public class Events extends AppCompatActivity {
             public void onClick(View v) {
                 final int x= viewPager.getCurrentItem()+1;
 
-                switch (x)
-                {
-
+                if (x==1){
+                    Intent i= new Intent(Events.this,CheckoutActivity.class);
+                    startActivity(i);
                 }
 
 

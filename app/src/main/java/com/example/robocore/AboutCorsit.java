@@ -38,9 +38,9 @@ initImageBitmaps();
 
     }
     private void initImageBitmaps(){
-        mImageUrls.add(R.mipmap.lfrone);
+        mImageUrls.add(R.mipmap.robo_tech);
         mNames.add("Robocon");
-        mImageUrls.add(R.mipmap.robo);
+        mImageUrls.add(R.mipmap.rc);
         mNames.add("Projects");
         mImageUrls.add(R.mipmap.roborace);
         mNames.add("Workshop");
