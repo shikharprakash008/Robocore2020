@@ -7,7 +7,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         app:cardCornerRadius="10dp"
         app:cardMaxElevation="20dp"
         app:cardElevation="12dp"
@@ -17,11 +17,11 @@
         <RelativeLayout
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
@@ -29,14 +29,15 @@
                 android:id="@+id/main_one"
                 android:src="@drawable/ic_launcher_background"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
                 android:text="xyz"
                 android:layout_below="@+id/main_one"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/text"
+                android:textStyle="bold"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMinTextSize="8sp"
                 android:autoSizeMaxTextSize="15sp"

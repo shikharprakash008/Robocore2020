@@ -13,7 +13,7 @@
         <item
             android:id="@+id/robocore"
             android:icon="@drawable/robo_icon"
-            android:title="Robocore 2K19" />
+            android:title="Robocor 20" />
         <item
             android:id="@+id/events"
             android:icon="@drawable/eventsone"
