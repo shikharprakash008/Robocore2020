@@ -1,9 +1,13 @@
 package com.example.robocore;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -16,13 +20,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
+import cn.iwgang.countdownview.CountdownView;
 
 public class NavigationDrawer extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener{
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
     VideoView videoView;
+    ScrollView scrollView;
+
+    LinearLayout countDownLlayout;
+    AnimationDrawable animationDrawable;
+    TextView tv;
+    CountdownView mCvCountdownView;
     ActionBarDrawerToggle toggle;
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageUrls=new ArrayList<>();
@@ -30,6 +45,8 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
+
+
 
         drawerLayout= findViewById(R.id.drawer);
         toolbar=findViewById(R.id.toolbar);
@@ -50,6 +67,38 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         videoView.setVideoURI(uri);
         videoView.requestFocus();
         videoView.start();*/
+
+        //code for count dime timer
+
+        //scrollView= (ScrollView) findViewById(R.id.scroll);
+
+        //animationDrawable = (AnimationDrawable) scrollView.getBackground();
+
+        //animationDrawable.setEnterFadeDuration(4500);
+       // animationDrawable.setExitFadeDuration(4500);
+        //animationDrawable.start();
+
+
+        mCvCountdownView = findViewById(R.id.mycountdown);
+
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        String countDate = "07-03-2020 00:00:00";
+        Date now = new Date();
+
+
+        try {
+            //Formatting from String to Date
+            Date date = sdf.parse(countDate);
+            long currentTime = now.getTime();
+            long newYearDate = date.getTime();
+            long countDownToNewYear = newYearDate - currentTime;
+            mCvCountdownView.start(countDownToNewYear);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override

@@ -33,26 +33,30 @@ public class Events extends AppCompatActivity {
         models.add(new Model(R.drawable.roborace,"Robo Soccer","The objective is to design a manual robot which can compete on an arena specially designed for robotic soccer match. It will be a one vs one soccer match in which the aim will be to push the ball in the opponent's goal post. The most dexterous and quirky design prevail.  Registration Fee : Rs 300 Per Team"));
         models.add(new Model(R.drawable.paper,"Paper Presentation","Putting pen to paper and allowing your mind to speak is what adds to the glory of technical event. It's all about how innovative your idea is, how much you've researched on it and how you present it. Topics can be on engineering and high tech purposes, describing advances in technology, problem resolution, or open innovation . All papers must be strictly in IEEE format .  Abstract submission open, mail the abstracts to \\\"corsit.sit@gmail.com\\\" .   Last date to submit the abstract 12th March.  Registration Fee : Rs 150 Per Team"));
         models.add(new Model(R.drawable.decode_projecte,"D-Code","Coding is one of the most important part of Robotics. This event encourage students from all branches to participate and improve their coding and critical thinking skills. Bring your id with you and you are good to go!"));
-        models.add(new Model(R.drawable.arduino,"Arduino Ninja",""));
+        models.add(new Model(R.drawable.arduino,"Duino Ninja",""));
 
         adapter = new Adapter (models,this);
 
         viewPager=findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
+
         viewPager.setPadding(130,0,130,0);
         register=findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextActivity();
-            }
+                final int x= viewPager.getCurrentItem()+1;
 
-            private void nextActivity() {
+                switch (x)
+                {
+
+                }
 
 
 
             }
         });
+
 
         Integer[] colors_temp ={
           getResources().getColor(R.color.pink_one),
@@ -91,4 +95,6 @@ public class Events extends AppCompatActivity {
 
 
     }
+
+
 }

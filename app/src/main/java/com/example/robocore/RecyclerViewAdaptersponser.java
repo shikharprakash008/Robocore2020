@@ -1,20 +1,11 @@
 package com.example.robocore;
 
-import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
 
 public class RecyclerViewAdaptersponser  extends RecyclerView.Adapter <RecyclerViewAdaptersponser.ViewHolder>{
 
@@ -24,7 +15,7 @@ public class RecyclerViewAdaptersponser  extends RecyclerView.Adapter <RecyclerV
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_listitem,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item,viewGroup,false);
         return new ViewHolder(view);
     }
 

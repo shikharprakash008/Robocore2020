@@ -15,13 +15,13 @@
         android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/mainLayout"
-        android:background="#e0e0e0"
+        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:background="@color/graylight"
+            android:background="@color/black"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -30,12 +30,54 @@
             android:orientation="horizontal">
         </androidx.recyclerview.widget.RecyclerView>
 
-        <RelativeLayout
-            android:id="@+id/time"
-            android:background="@color/graylight"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="210dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/timeLayout"
+            android:gravity="center"
+            android:layout_below="@+id/recyclerView">
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/mycountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                app:isHideTimeBackground="false"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isTimeTextBold="true"
+                app:suffixDay=" D "
+                app:suffixGravity="center"
+                app:suffixHour=" H "
+                app:timeBgBorderRadius="8dp"
+                app:timeBgRadius="8dp"
+                app:timeBgColor="#000000"
+                app:isShowTimeBgBorder="true"
+                app:suffixMinute=" M "
+                app:suffixSecond=" S "
+                app:suffixTextColor="#000000"
+                app:suffixTextSize="20sp"
+                app:timeTextColor="#ffffff"
+                app:timeBgDivisionLineColor="#000000"
+                app:timeTextSize="32sp"
+                />
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+
+            android:id="@+id/time"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_marginTop="250dp"
             android:layout_height="wrap_content">
+
+
             <ViewFlipper
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -90,7 +132,7 @@
             <RelativeLayout
                 android:layout_below="@+id/time"
                 android:id="@+id/comingSoon"
-                android:background="@color/graylight"
+                android:background="@color/black"
                 android:layout_width="match_parent"
                 android:layout_marginTop="29dp"
                 android:layout_height="200dp">
@@ -114,7 +156,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/graylight">
+            android:background="@color/black">
             <LinearLayout
                 android:gravity="start"
                 android:id="@+id/tileLayout"
@@ -130,7 +172,7 @@
                     android:layout_height="wrap_content"
                     android:text="ROBOCOR 2020"
                     android:textAllCaps="true"
-                    android:textColor="@color/black"
+                    android:textColor="@color/graylight"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
