@@ -119,6 +119,9 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
             Intent i= new Intent(NavigationDrawer.this,Team.class);
             startActivity(i);
         }
+        else if(id == R.id.register) {
+            startActivity(new Intent(NavigationDrawer.this, Registration.class));
+        }
         else if (id == R.id.contact) {
             Intent i= new Intent(NavigationDrawer.this,ConatactUs.class);
             startActivity(i);

@@ -4,6 +4,4 @@
       android:color="@color/colorAccent"/>
     <corners
         android:radius="200dp"/>
-
-
 </shape>
