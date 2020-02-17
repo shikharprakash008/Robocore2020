@@ -1,4 +1,4 @@
-package com.example.robocore;
+package com.example.robocore.Reg;
 
 public class teamLeaderInfo_form {
 

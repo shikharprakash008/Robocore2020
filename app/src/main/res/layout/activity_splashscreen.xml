@@ -33,16 +33,19 @@
         />
 
     <ProgressBar
+        android:layout_below="@+id/splashcorsit"
         android:id="@+id/splashprogress"
         android:layout_width="85dp"
         android:layout_height="114dp"
+        android:layout_alignTop="@+id/corsitlogo"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="166dp"
-        android:layout_marginLeft="166dp"
 
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="461dp"
         android:layout_marginBottom="69dp" />
 
 
