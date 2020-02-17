@@ -22,9 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
-            android:text="ROBOCORE 20"
+            android:text="ROBOCOR 20"
             android:textColor="@android:color/white"
-            android:textSize="50sp"
+            android:textSize="47sp"
             android:textStyle="bold|italic" />
 
         <TextView
@@ -33,6 +33,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
+            android:fontFamily="@font/aldrich"
             android:text="RETHINK YOUR IMAGINATION"
             android:textAlignment="center"
             android:textColor="@android:color/white"
