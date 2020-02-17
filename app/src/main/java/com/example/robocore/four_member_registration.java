@@ -108,14 +108,14 @@ public class four_member_registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String amounttxt = "2";
+                String amounttxt = "1";
                 String notetxt = "Registration";
                 String upitxt = "8296668642@paytm";
 
 
                 final String str_name1 = tiet_teamLeader_name.getText().toString().trim();
 
-                //payusingupi(amounttxt, notetxt, upitxt, str_name1);
+                payusingupi(amounttxt, notetxt, upitxt, str_name1);
                 final String str_teamName = tiet_teamName.getText().toString().trim();
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();

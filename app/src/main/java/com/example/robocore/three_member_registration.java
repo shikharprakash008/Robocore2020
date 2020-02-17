@@ -1,13 +1,21 @@
 package com.example.robocore;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,11 +25,14 @@ import android.widget.Toast;
 
 import com.example.robocore.Reg.memberInfo_form;
 import com.example.robocore.Reg.teamLeaderInfo_form;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class three_member_registration extends AppCompatActivity {
@@ -35,6 +46,8 @@ public class three_member_registration extends AppCompatActivity {
     CardView cvRegister;
 
     Dialog loadingDialog;
+
+    final int UPI_PAYMENT = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +87,14 @@ public class three_member_registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String amounttxt = "1";
+                String notetxt = "Registration";
+                String upitxt = "8296668642@paytm";
+
                 final String str_name1 = tiet_teamLeader_name.getText().toString().trim();
+
+                payusingupi(amounttxt, notetxt, upitxt, str_name1);
+
                 final String str_teamName = tiet_teamName.getText().toString().trim();
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();
@@ -158,7 +178,31 @@ public class three_member_registration extends AppCompatActivity {
 //                    }
 //                });
 
-                Toast.makeText(three_member_registration.this, str_regEvent, Toast.LENGTH_SHORT).show();
+
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(three_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(three_member_registration.this, "Member 2 added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member3Details").setValue(member3Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(three_member_registration.this, "Member 3 added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
 
             }
         });
@@ -185,5 +229,116 @@ public class three_member_registration extends AppCompatActivity {
         loadingDialog.show();
 
     }
+
+    // payment start
+    private void payusingupi(String amounttxt, String notetxt, String upitxt, String str_name1) {
+
+        Uri uri = Uri.parse("upi://pay").buildUpon().appendQueryParameter("pa", upitxt)
+                .appendQueryParameter("pn", str_name1)
+                .appendQueryParameter("tn", notetxt)
+                .appendQueryParameter("am", amounttxt)
+                .appendQueryParameter("cu", "INR").build();
+
+        Intent upi_payment = new Intent(Intent.ACTION_VIEW);
+        upi_payment.setData(uri);
+        Intent chooser = Intent.createChooser(upi_payment, "pay with");
+        if (null != chooser.resolveActivity(getPackageManager())) {
+            startActivityForResult(chooser, UPI_PAYMENT);
+        } else {
+            Toast.makeText(this, "No upi app found", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void initializemethod() {
+
+        String amounttxt = "400";
+        String notetxt = "Registration";
+        String upitxt = "8296668642@paytm";
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case UPI_PAYMENT:
+                if ((RESULT_OK == resultCode || (resultCode == 11))) {
+                    if (data != null) {
+                        String txt = data.getStringExtra("response");
+                        Log.d("UPI", "onActivityResult:" + txt);
+                        ArrayList<String> dataLst = new ArrayList<>();
+                        dataLst.add("Nothing");
+                        upipaymentdataoperation(dataLst);
+                    } else {
+                        Log.d("UPI", "onActivityResult:" + "Return Data is null");
+                        ArrayList<String> dataLst = new ArrayList<>();
+                        dataLst.add("Nothing");
+                        upipaymentdataoperation(dataLst);
+
+                    }
+                } else {
+                    Log.d("UPI", "onActivityResult:" + "Return Data is null");
+                    ArrayList<String> dataLst = new ArrayList<>();
+                    dataLst.add("Nothing");
+                    upipaymentdataoperation(dataLst);
+                }
+                break;
+        }
+    }
+
+    private void upipaymentdataoperation(ArrayList<String> dataLst) {
+        if (isConnectionAvailable(three_member_registration.this)) {
+            String str = dataLst.get(0);
+            Log.d("UPIPAY", "upipaymentoperation:" + str);
+            String paymentCanel = "";
+            if (str == null) str = "discard";
+            String status = "";
+            String approvalref = "";
+            String response[] = str.split("&");
+            for (int i = 0; i < response.length; i++) {
+                String equalStr[] = response[i].split("=");
+                if (equalStr.length >= 2) {
+                    if (equalStr[0].toLowerCase().equals("Status".toLowerCase())) {
+                        status = equalStr[1].toLowerCase();
+                    } else if (equalStr[0].toLowerCase().equals("approval Ref".toLowerCase()) ||
+                            equalStr[0].toLowerCase().equals("txRef".toLowerCase())) {
+                        approvalref = equalStr[1];
+                    }
+
+                } else {
+                    paymentCanel = "payment cancel by user";
+                    if (status.equals("success")) {
+                        Toast.makeText(this, "Transaction Succesfull", Toast.LENGTH_SHORT).show();
+                        Log.d("UPI", "responsestr+" + approvalref);
+                    } else if ("Payment cancel by user".equals(paymentCanel)) {
+                        Toast.makeText(this, "Payment cancel by user", Toast.LENGTH_SHORT).show();
+
+
+                    } else {
+                        Toast.makeText(this, "Transaction failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+            }
+
+
+        } else {
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private boolean isConnectionAvailable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            if (networkInfo != null && networkInfo.isConnected() && networkInfo.isConnectedOrConnecting() && networkInfo.isAvailable()) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+//payment end
 
 }
