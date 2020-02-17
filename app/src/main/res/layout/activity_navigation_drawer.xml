@@ -65,6 +65,7 @@
                 android:id="@+id/timeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:layout_below="@+id/recyclerView"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -81,7 +82,7 @@
                     app:isShowMillisecond="false"
                     app:isShowMinute="true"
                     app:isShowSecond="true"
-                    app:isShowTimeBgBorder="true"
+                    app:isShowTimeBgBorder="false"
                     app:isTimeTextBold="true"
                     app:suffixDay=" D "
                     app:suffixGravity="center"
@@ -91,10 +92,10 @@
                     app:suffixTextColor="#000000"
                     app:suffixTextSize="20sp"
                     app:timeBgBorderRadius="8dp"
-                    app:timeBgColor="#000000"
-                    app:timeBgDivisionLineColor="#000000"
+                    app:timeBgColor="#ffffff"
+                    app:timeBgDivisionLineColor="#00000000"
                     app:timeBgRadius="8dp"
-                    app:timeTextColor="#ffffff"
+                    app:timeTextColor="#000000"
                     app:timeTextSize="32sp" />
             </LinearLayout>
 

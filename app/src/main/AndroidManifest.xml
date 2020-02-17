@@ -14,6 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".two_member_registration"/>
+        <activity android:name=".three_member_registration"/>
+        <activity android:name=".four_member_registration"/>
         <activity android:name=".ConatactUs"></activity>
         <activity android:name=".sponsors" />
         <activity android:name=".WelcomeActivity" />
