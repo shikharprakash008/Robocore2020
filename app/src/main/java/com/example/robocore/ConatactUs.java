@@ -43,7 +43,7 @@ public class ConatactUs extends AppCompatActivity {
                 sub = et_sub.getText().toString().trim();
                 msg = et_msg.getText().toString().trim();
 
-                String myMailId = "kaisarshabirdar@gmail.com";
+                String myMailId = "corsit.sit@gmail.com";
                 String[] emails = myMailId.split(","); //split not required since only one email id
 
                 msg = msg + "\n\"" + "Email: " + email + "\"" + "\n\"" + "Name: " + name + "\"";

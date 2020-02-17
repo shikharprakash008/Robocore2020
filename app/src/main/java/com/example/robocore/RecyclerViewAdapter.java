@@ -81,9 +81,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         i.putExtra("event", "RoboSoccer");
                         mContext.startActivity(i);
                         break;
-                    case "Decode":
+                    case "D-Code":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "DCode");
+                        mContext.startActivity(i);
+                        break;
+                    case "Arduino Clash":
+                        i = new Intent(mContext, three_member_registration.class);
+                        i.putExtra("event", "ArduinoClash");
                         mContext.startActivity(i);
                         break;
                     default:

@@ -34,7 +34,7 @@
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
             android:fontFamily="@font/aldrich"
-            android:text="RETHINK YOUR IMAGINATION"
+            android:text="THRUSTING LIMITS"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />

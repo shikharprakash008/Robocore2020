@@ -180,7 +180,10 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         mImageUrls.add(R.mipmap.robosoccer);
         mNames.add("Robo Soccer");
         mImageUrls.add(R.mipmap.coding);
-        mNames.add("Decode");
+        mNames.add("D-Code");
+        mImageUrls.add(R.drawable.arduino);
+        mNames.add("Arduino Clash");
+
 
         initRecyclerView();
     }
