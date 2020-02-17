@@ -86,7 +86,7 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        String countDate = "07-03-2020 00:00:00";
+        String countDate = "06-03-2020 00:00:00";
         Date now = new Date();
 
 

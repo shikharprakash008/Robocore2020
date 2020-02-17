@@ -1,5 +1,6 @@
 package com.example.robocore;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -17,6 +18,8 @@ import android.widget.Toast;
 
 import com.example.robocore.Reg.memberInfo_form;
 import com.example.robocore.Reg.teamLeaderInfo_form;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -119,21 +122,21 @@ public class two_member_registration extends AppCompatActivity {
 
                 showLoadingDialog(v);
 
-//                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        Toast.makeText(two_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-//                        FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(memberInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                Toast.makeText(two_member_registration.this, "Registration Successfull.", Toast.LENGTH_SHORT).show();
-//                                loadingDialog.dismiss();
-//                                finish();
-//                            }
-//                        });
-//                        finish();
-//                    }
-//                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(two_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
+                        FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(memberInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(two_member_registration.this, "Registration Successfull.", Toast.LENGTH_SHORT).show();
+                                loadingDialog.dismiss();
+                                finish();
+                            }
+                        });
+                        finish();
+                    }
+                });
 
                 Toast.makeText(two_member_registration.this, str_regEvent, Toast.LENGTH_SHORT).show();
             }
