@@ -4,9 +4,11 @@
     package="com.example.robocore">
 
     <dist:module dist:instant="true" />
+
     <meta-data
         android:name="com.google.android.gms.wallet.api.enabled"
         android:value="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,10 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".two_member_registration"/>
-        <activity android:name=".three_member_registration"/>
-        <activity android:name=".four_member_registration"/>
-        <activity android:name=".ConatactUs"></activity>
+        <activity
+            android:name=".aboutPopUpRobocor"
+            android:theme="@style/AppTheme.PopUpTheme" />
+        <activity
+            android:name=".aboutPopUp"
+            android:theme="@style/AppTheme.PopUpTheme" />
+        <activity android:name=".two_member_registration" />
+        <activity android:name=".three_member_registration" />
+        <activity android:name=".four_member_registration" />
+        <activity android:name=".ConatactUs" />
         <activity android:name=".sponsors" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".Team" />

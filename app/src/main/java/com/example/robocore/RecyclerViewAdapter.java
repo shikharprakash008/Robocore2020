@@ -1,6 +1,7 @@
 package com.example.robocore;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +17,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdapter.ViewHolder>{
-    private static final String TAG ="RecyclerViewAdapter";
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+    private static final String TAG = "RecyclerViewAdapter";
 
     private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<Integer> mImageUrls=new ArrayList<>();
+    private ArrayList<Integer> mImageUrls = new ArrayList<>();
     private Context mContext;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> mNames, ArrayList<Integer> mImageUrls) {
@@ -33,13 +34,15 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
         return new ViewHolder(view);
+
+
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Log.d(TAG ,"onCreateViewHolder:called.");
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        Log.d(TAG, "onCreateViewHolder:called.");
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImageUrls.get(position))
@@ -49,9 +52,45 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
-                Log.d(TAG,"onClick:clicked on an image:"+mNames.get(position));
-                Toast.makeText(mContext,mNames.get(position),Toast.LENGTH_SHORT).show();
+
+                Intent i;
+
+                switch (holder.textView.getText().toString()) {
+                    case "Line Follower":
+                        i = new Intent(mContext, four_member_registration.class);
+                        i.putExtra("event", "LineFollower");
+                        mContext.startActivity(i);
+                        break;
+                    case "Cross Roads":
+                        i = new Intent(mContext, four_member_registration.class);
+                        i.putExtra("event", "CrossRoads");
+                        mContext.startActivity(i);
+                        break;
+                    case "RoboRash":
+                        i = new Intent(mContext, four_member_registration.class);
+                        i.putExtra("event", "RoboRace");
+                        mContext.startActivity(i);
+                        break;
+                    case "Paper":
+                        i = new Intent(mContext, two_member_registration.class);
+                        i.putExtra("event", "PaperPresentation");
+                        mContext.startActivity(i);
+                        break;
+                    case "Robo Soccer":
+                        i = new Intent(mContext, four_member_registration.class);
+                        i.putExtra("event", "RoboSoccer");
+                        mContext.startActivity(i);
+                        break;
+                    case "Decode":
+                        i = new Intent(mContext, two_member_registration.class);
+                        i.putExtra("event", "DCode");
+                        mContext.startActivity(i);
+                        break;
+                    default:
+                        Toast.makeText(mContext, "Sonething went wrong.", Toast.LENGTH_SHORT).show();
+                }
+//                Log.d(TAG, "onClick:clicked on an image:" + mNames.get(position));
+//                Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -63,19 +102,18 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter <RecyclerViewAdap
         return mImageUrls.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
         TextView textView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            image =itemView.findViewById(R.id.main_one);
-            textView=itemView.findViewById(R.id.text);
+            image = itemView.findViewById(R.id.main_one);
+            textView = itemView.findViewById(R.id.text);
         }
     }
 
 
-
-    }
+}
 

@@ -5,16 +5,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/corsit"
-            android:icon="@drawable/about"
-            android:title="Corsit"
-
-            />
-        <item
-            android:id="@+id/robocore"
-            android:icon="@drawable/robo_icon"
-            android:title="Robocor 20" />
-        <item
             android:id="@+id/events"
             android:icon="@drawable/eventsone"
             android:title="Events"/>
@@ -32,6 +22,37 @@
 
             />
     </group>
+
+    <item android:title="Our Activites">
+        <menu>
+            <item
+                android:id="@+id/item_robocor"
+                android:icon="@drawable/robo_icon"
+                android:title="ROBOCOR"
+                />
+            <item
+                android:id="@+id/item_projects"
+                android:icon="@drawable/project"
+                android:title="Projects"
+                />
+            <item
+                android:id="@+id/item_workshop"
+                android:icon="@drawable/workshop"
+                android:title="Workshop"
+                />
+            <item
+                android:id="@+id/item_competitions"
+                android:icon="@drawable/competitions"
+                android:title="Compititions"
+                />
+            <item
+                android:id="@+id/item_sessions"
+                android:icon="@drawable/sessions"
+                android:title="Sessions"
+                />
+        </menu>
+    </item>
+
     <item android:title="Communicate">
         <menu>
             <item
@@ -43,6 +64,21 @@
                 android:icon="@drawable/placeholder"
                 android:title="Location" />
 
+        </menu>
+    </item>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/about_corsit"
+                android:icon="@drawable/robo_icon"
+                android:title="Corsit"
+                />
+            <item
+                android:id="@+id/about_robocor"
+                android:icon="@drawable/logo"
+                android:title="ROBOCOR"
+                />
         </menu>
     </item>
 

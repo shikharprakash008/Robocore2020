@@ -1,5 +1,6 @@
 package com.example.robocore;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
@@ -12,8 +13,10 @@ import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -105,40 +108,64 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
         int id = menuitem.getItemId();
 
-        if (id == R.id.corsit) {
-            Intent i= new Intent(NavigationDrawer.this,AboutCorsit.class);
-            startActivity(i);
-            // Handle the camera action
-        } else if (id == R.id.robocore) {
-            Intent i= new Intent(NavigationDrawer.this,AboutRobocore.class);
-            startActivity(i);
-        } else if (id == R.id.events) {
-            Intent i= new Intent(NavigationDrawer.this,Events.class);
-            startActivity(i);
-        } else if (id == R.id.team) {
-            Intent i= new Intent(NavigationDrawer.this,Team.class);
-            startActivity(i);
-        }
-        else if (id == R.id.contact) {
-            Intent i= new Intent(NavigationDrawer.this,ConatactUs.class);
-            startActivity(i);
-        }
-        else if (id==R.id.Location)
-        {
-            Uri gmmIntentUri = Uri.parse("geo:13.3269° N, 77.1261° E");
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-            mapIntent.setPackage("com.google.android.apps.maps");
-            if (mapIntent.resolveActivity(getPackageManager()) != null) {
-                startActivity(mapIntent);
-                finish();
-            }
-        }
-        else if (id==R.id.sponsors)
-        {
-            Intent i= new Intent(NavigationDrawer.this,sponsors.class);
-            startActivity(i);
+        Intent i;
+
+        switch (id) {
+            case R.id.events:
+                i= new Intent(NavigationDrawer.this,Events.class);
+                startActivity(i);
+                break;
+            case R.id.team:
+                i= new Intent(NavigationDrawer.this,Team.class);
+                startActivity(i);
+                break;
+            case R.id.contact:
+                i= new Intent(NavigationDrawer.this,ConatactUs.class);
+                startActivity(i);
+                break;
+            case R.id.Location:
+                Uri gmmIntentUri = Uri.parse("geo:13.3269° N, 77.1261° E");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                    finish();
+                }
+                break;
+            case R.id.sponsors:
+                i= new Intent(NavigationDrawer.this,sponsors.class);
+                startActivity(i);
+                break;
+            case R.id.item_robocor:
+
+            case R.id.item_projects:
+
+            case R.id.item_workshop:
+
+            case R.id.item_competitions:
+
+            case R.id.item_sessions:
+                AlertDialog.Builder builder = new AlertDialog.Builder(NavigationDrawer.this);
+                builder.setMessage("You do not have access to it!")
+                        .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+                break;
+            case R.id.about_corsit:
+                startActivity(new Intent(NavigationDrawer.this, aboutPopUp.class));
+                break;
+            case R.id.about_robocor:
+                startActivity(new Intent(NavigationDrawer.this, aboutPopUpRobocor.class));
+                break;
+
         }
 
+        drawerLayout.closeDrawer((GravityCompat.START));
         return true;
     }
     private void initImageBitmaps(){

@@ -158,33 +158,19 @@
 
                 </ViewFlipper>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                <GridLayout
                     android:layout_below="@+id/view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:columnCount="2"
+                    android:rowCount="1"
+                    android:alignmentMode="alignMargins"
                     android:background="@drawable/robo"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:orientation="horizontal"
                     >
 
-<!--                    <Button-->
-<!--                        android:id="@+id/button2"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:background="#00000000"-->
-<!--                        />-->
-
-<!--                    <Button-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:background="#00000000"-->
-<!--                        />-->
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </GridLayout>
 
 
 

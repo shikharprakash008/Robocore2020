@@ -41,7 +41,7 @@ public class four_member_registration extends AppCompatActivity {
     TextInputEditText tiet_member4_name, tiet_member4_email, tiet_member4_contact;
 
     CardView cvRegister;
-   FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     Dialog loadingDialog;
 
     @Override
@@ -53,9 +53,9 @@ public class four_member_registration extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         iv_back = (ImageView) findViewById(R.id.back);
 
-        database= FirebaseDatabase.getInstance();
-        registration=database.getReference("Registration");
-       // users=database.getReference("Users");
+//        database = FirebaseDatabase.getInstance();
+//        registration = database.getReference("Registration");
+        // users=database.getReference("Users");
 
         tiet_teamLeader_name = (TextInputEditText) findViewById(R.id.name1);
         tiet_teamName = (TextInputEditText) findViewById(R.id.teamname);
@@ -97,7 +97,7 @@ public class four_member_registration extends AppCompatActivity {
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();
                 final String str_college = tiet_teamLeader_college.getText().toString().trim();
-                final teamLeaderInfo_form four =new teamLeaderInfo_form(str_name1,str_teamName,str_email1,str_contact1,str_college);
+                final teamLeaderInfo_form four = new teamLeaderInfo_form(str_name1, str_teamName, str_email1, str_contact1, str_college);
 //
 //
 //                registration.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -154,49 +154,49 @@ public class four_member_registration extends AppCompatActivity {
                 String str_contact4 = tiet_member4_contact.getText().toString().trim();
 
 
-                if(TextUtils.isEmpty(str_name1)) {
+                if (TextUtils.isEmpty(str_name1)) {
                     Toast.makeText(four_member_registration.this, "Enter team leader's name.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_teamName)) {
+                if (TextUtils.isEmpty(str_teamName)) {
                     Toast.makeText(four_member_registration.this, "Team name cann't be empty.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_email1)) {
+                if (TextUtils.isEmpty(str_email1)) {
                     Toast.makeText(four_member_registration.this, "Enter team leader's email.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_contact1)) {
+                if (TextUtils.isEmpty(str_contact1)) {
                     Toast.makeText(four_member_registration.this, "Enter team leader's contact.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_college)) {
+                if (TextUtils.isEmpty(str_college)) {
                     Toast.makeText(four_member_registration.this, "Enter your college.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if(!TextUtils.isEmpty(str_name2) && (TextUtils.isEmpty(str_email2) || TextUtils.isEmpty(str_contact2))) {
+                if (!TextUtils.isEmpty(str_name2) && (TextUtils.isEmpty(str_email2) || TextUtils.isEmpty(str_contact2))) {
                     Toast.makeText(four_member_registration.this, "Member 2 details are incomplete.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_name2)) {
+                if (TextUtils.isEmpty(str_name2)) {
                     str_email2 = "";
                     str_contact2 = "";
                 }
-                if(!TextUtils.isEmpty(str_name3) && (TextUtils.isEmpty(str_email3) || TextUtils.isEmpty(str_contact3))) {
+                if (!TextUtils.isEmpty(str_name3) && (TextUtils.isEmpty(str_email3) || TextUtils.isEmpty(str_contact3))) {
                     Toast.makeText(four_member_registration.this, "Member 3 details are incomplete.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_name3)) {
+                if (TextUtils.isEmpty(str_name3)) {
                     str_email3 = "";
                     str_contact3 = "";
                 }
 
-                if(!TextUtils.isEmpty(str_name4) && (TextUtils.isEmpty(str_email4) || TextUtils.isEmpty(str_contact4))) {
+                if (!TextUtils.isEmpty(str_name4) && (TextUtils.isEmpty(str_email4) || TextUtils.isEmpty(str_contact4))) {
                     Toast.makeText(four_member_registration.this, "Member 4 details are incomplete.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(str_name4)) {
+                if (TextUtils.isEmpty(str_name4)) {
                     str_email4 = "";
                     str_contact4 = "";
                 }
@@ -205,21 +205,22 @@ public class four_member_registration extends AppCompatActivity {
 
 
                 teamLeaderInfo_form teamLeaderInfo = new teamLeaderInfo_form(str_name1, str_teamName, str_email1, str_contact1, str_college);
-                 final memberInfo_form member2Info = new memberInfo_form(str_name2, str_email2, str_contact2);
-                 final memberInfo_form member3Info = new memberInfo_form(str_name3, str_email3, str_contact3);
-                 final memberInfo_form member4Info = new memberInfo_form(str_name4, str_email4, str_contact4);
-              //  final teamLeaderInfo_form teamLeaderInfoForm =new teamLeaderInfo_form(str_name1,str_email1,str_college,str_contact1,str_college);
+                final memberInfo_form member2Info = new memberInfo_form(str_name2, str_email2, str_contact2);
+                final memberInfo_form member3Info = new memberInfo_form(str_name3, str_email3, str_contact3);
+                final memberInfo_form member4Info = new memberInfo_form(str_name4, str_email4, str_contact4);
+                //  final teamLeaderInfo_form teamLeaderInfoForm =new teamLeaderInfo_form(str_name1,str_email1,str_college,str_contact1,str_college);
 
                 DateFormat dftf = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss");
                 final String dateTime = dftf.format(Calendar.getInstance().getTime());
 
                 showLoadingDialog(v);
 
-               FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {@Override
+                        FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member3Details").setValue(member3Info).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
@@ -245,9 +246,9 @@ public class four_member_registration extends AppCompatActivity {
             }
         });
 
-        }
+    }
 
-//
+    //
     public void showLoadingDialog(View v) {
 
         loadingDialog.setContentView(R.layout.loading_dialogbox);
