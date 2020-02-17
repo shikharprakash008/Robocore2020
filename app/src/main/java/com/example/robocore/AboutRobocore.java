@@ -25,10 +25,10 @@ ImageView image2;
             public void onClick(View view) {
                 Intent i= new Intent(AboutRobocore.this,NavigationDrawer.class);
                 startActivity(i);
-                initImageBitmaps();
+
             }
         });
-
+        initImageBitmaps();
 
     }
     private void initImageBitmaps(){

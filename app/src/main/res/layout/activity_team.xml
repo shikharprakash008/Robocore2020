@@ -75,10 +75,29 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/keshav"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="120dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/keshav_b"/>
+
+                            <TextView
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
+                                android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+                                android:text="Keshav Mishra"/>
+                            <TextView
+                                android:text="Chairman"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
                         </LinearLayout>
 
@@ -95,10 +114,29 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/pankaj"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="120dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/pankaj"/>
+
+                            <TextView
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
+                                android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+                                android:text="Pankaj"/>
+                            <TextView
+                                android:text="Vice Chairman"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
 
                         </LinearLayout>
 
@@ -116,10 +154,28 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="120dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:src="@mipmap/abhinav" />
+
+                            <TextView
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
+                                android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+                                android:text="Abhinav"/>
+                            <TextView
+                                android:text="Treasurer"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
                         </LinearLayout>
 
@@ -151,10 +207,7 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+
 
                         </LinearLayout>
 
@@ -171,10 +224,27 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="120dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/amit"/>
+
+                            <TextView
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
+                                android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+                                android:text="Amit"/>
+                            <TextView
+                                android:text="Graphics Designer"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
                         </LinearLayout>
 
@@ -192,12 +262,31 @@
                             android:background="@drawable/bg_profile"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp">
-                            <ImageView
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_width="120dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/krishnkant"/>
+
+                            <TextView
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
+                                android:textColor="@color/black"
                                 android:layout_height="wrap_content"
-                                android:src="@mipmap/robo"/>
+                                android:text="Krishnakant"/>
+                            <TextView
+                                android:text="Senior Member"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
                         </LinearLayout>
+
+
 
                     </LinearLayout>
 
@@ -205,6 +294,7 @@
 
 
                 </LinearLayout>
+
         <LinearLayout
             android:paddingTop="24dp"
             android:paddingBottom="24dp"
@@ -226,10 +316,27 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/natesh"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Natesh"/>
+                    <TextView
+                        android:text="Senior Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -246,10 +353,27 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/gs"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Gangadhar"/>
+                    <TextView
+                        android:text="Senior Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -267,10 +391,27 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/kundan"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Kundan"/>
+                    <TextView
+                        android:text="Senior Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -301,10 +442,27 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/shikhar"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Shikhar"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -321,10 +479,27 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/saksham"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Shaksham"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -342,10 +517,324 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/asra"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:text="Asra"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/anurag"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Anurag"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/anushant"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Anushant"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/raghav"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Raghav"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/aditi"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Aditi"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/nikita"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Nitika"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/anand"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Anand"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -376,10 +865,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/manojana"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Manojana"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -396,10 +911,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/shivu"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Shivneeth"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -417,10 +958,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/chetan"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Chetan"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -451,10 +1018,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/sandeep"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Sandeep"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -471,10 +1064,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/anshuman"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Anshuman"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -492,10 +1111,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Aman"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -526,10 +1171,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/chetan_j"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Aditya"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -546,10 +1217,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/rohan_r"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Rohan"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -567,10 +1264,36 @@
                     android:background="@drawable/bg_profile"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@drawable/bg_profile"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/rohit"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:text="Rohit"/>
+                        <TextView
+                            android:text="Member"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -581,230 +1304,6 @@
 
         </LinearLayout>
         <LinearLayout
-            android:paddingTop="24dp"
-            android:paddingBottom="24dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:paddingTop="24dp"
-            android:paddingBottom="24dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:paddingTop="24dp"
-            android:paddingBottom="24dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:layout_weight="3"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:background="@drawable/bg_profile"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-
-
-        </LinearLayout><LinearLayout
         android:paddingTop="24dp"
         android:paddingBottom="24dp"
         android:paddingLeft="16dp"
@@ -825,10 +1324,29 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/sss"/>
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                    android:text="Srishti"/>
+                <TextView
+                    android:text="Member"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -845,10 +1363,27 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ansa"/>
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                    android:text="Ansa"/>
+                <TextView
+                    android:text="Member"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -866,10 +1401,27 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/bhakti"/>
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                    android:text="Bhakti"/>
+                <TextView
+                    android:text="Member"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -899,10 +1451,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/sashvat"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Shashwat"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -919,10 +1497,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/tanmay"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Tanmay"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -940,10 +1544,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/shagun"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Shagun"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -977,7 +1607,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        android:src="@mipmap/chaya"/>
 
                 </LinearLayout>
 
@@ -1093,7 +1723,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/robo"/>
+                        />
 
                 </LinearLayout>
 
@@ -1198,10 +1828,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/mehraj"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Meghraj"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1218,10 +1874,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1239,10 +1921,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/bhakti"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Bhakti"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1272,10 +1980,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/shagun"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Shagun"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1292,10 +2026,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/sss"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Srishti"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1313,10 +2073,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/chaya"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Chaya"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1346,10 +2132,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/kshitiz"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Kshitiz"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -1366,11 +2178,36 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/yashwant"/>
 
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Yashwant"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
@@ -1387,10 +2224,542 @@
                 android:background="@drawable/bg_profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/robo"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/vineela"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Vineela"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/shruti"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Shruti"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/jyothi"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Jyothi"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/harshkant"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Harshkant"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/harshita"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Harshita"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/anubhav"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Anubhav"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/aditidubey"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Aditi"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/aditi_rai"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Aditi"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hrishikesh"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Hrishikesh"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hrishikesh"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Hrishikesh"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hrishikesh"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Hrishikesh"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="120dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hrishikesh"/>
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Hrishikesh"/>
+                    <TextView
+                        android:text="Member"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
