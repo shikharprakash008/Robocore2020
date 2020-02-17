@@ -126,7 +126,7 @@ public class two_member_registration extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(two_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        FirebaseDatabase.getInstance().getReference("Registration").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(memberInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(memberInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 Toast.makeText(two_member_registration.this, "Registration Successfull.", Toast.LENGTH_SHORT).show();

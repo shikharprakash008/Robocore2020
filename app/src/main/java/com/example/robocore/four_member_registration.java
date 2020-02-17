@@ -115,7 +115,7 @@ public class four_member_registration extends AppCompatActivity {
 
                 final String str_name1 = tiet_teamLeader_name.getText().toString().trim();
 
-                payusingupi(amounttxt, notetxt, upitxt, str_name1);
+                //payusingupi(amounttxt, notetxt, upitxt, str_name1);
                 final String str_teamName = tiet_teamName.getText().toString().trim();
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();
@@ -239,6 +239,30 @@ public class four_member_registration extends AppCompatActivity {
                 showLoadingDialog(v);
 
                 FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member3Details").setValue(member3Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
+                        loadingDialog.dismiss();
+                        finish();
+                    }
+                });
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member4Details").setValue(member4Info).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
