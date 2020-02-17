@@ -1,199 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    tools:openDrawer="end"
     android:id="@+id/drawer"
-    android:background="#e0e0e0"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NavigationDrawer">
+    android:background="#e0e0e0"
+    tools:context=".NavigationDrawer"
+    tools:openDrawer="end">
+
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/mainLayout"
-        android:background="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:background="@color/black"
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
-        </androidx.recyclerview.widget.RecyclerView>
-
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/mainLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/timeLayout"
-            android:gravity="center"
-            android:layout_below="@+id/recyclerView">
-            <cn.iwgang.countdownview.CountdownView
-                android:id="@+id/mycountdown"
-                android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ffffff">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="9dp"
-                app:isHideTimeBackground="false"
-                app:isShowDay="true"
-                app:isShowHour="true"
-                app:isShowMillisecond="false"
-                app:isShowMinute="true"
-                app:isShowSecond="true"
-                app:isTimeTextBold="true"
-                app:suffixDay=" D "
-                app:suffixGravity="center"
-                app:suffixHour=" H "
-                app:timeBgBorderRadius="8dp"
-                app:timeBgRadius="8dp"
-                app:timeBgColor="#000000"
-                app:isShowTimeBgBorder="true"
-                app:suffixMinute=" M "
-                app:suffixSecond=" S "
-                app:suffixTextColor="#000000"
-                app:suffixTextSize="20sp"
-                app:timeTextColor="#ffffff"
-                app:timeBgDivisionLineColor="#000000"
-                app:timeTextSize="32sp"
-                />
-        </LinearLayout>
+                android:background="#ffffff">
 
-
-
-
-        <RelativeLayout
-
-            android:id="@+id/time"
-            android:background="@color/black"
-            android:layout_width="match_parent"
-            android:layout_marginTop="250dp"
-            android:layout_height="wrap_content">
-
-
-            <ViewFlipper
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="12dp"
-                android:inAnimation="@android:anim/slide_in_left"
-                android:outAnimation="@android:anim/slide_out_right"
-                android:autoStart="true"
-                android:flipInterval="3000"
-                android:id="@+id/view_flipper"
-                >
-
-                <ImageView
-                    android:id="@+id/i1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:srcCompat="@mipmap/one" />
-                <ImageView
+                <LinearLayout
+                    android:id="@+id/tileLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@mipmap/two"
-                    android:id="@+id/slide"
-                    />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@mipmap/three"
-                    android:id="@+id/slide1"/>
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@mipmap/four"
-                    android:id="@+id/slide2"/>
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@mipmap/five"
-                    android:id="@+id/slide3"/>
+                    android:gravity="start"
+                    android:orientation="vertical">
 
 
-            </ViewFlipper>
-
-        </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_below="@+id/time"
-                android:id="@+id/comingSoon"
-                android:background="@color/black"
-                android:layout_width="match_parent"
-                android:layout_marginTop="29dp"
-                android:layout_height="200dp">
-
-            </RelativeLayout>
-
-
-
-        <RelativeLayout
-            android:layout_below="@+id/comingSoon"
-            android:id="@+id/relative"
-            android:background="@color/graylight"
-            android:layout_width="match_parent"
-            android:layout_marginTop="25dp"
-            android:layout_height="wrap_content">
-        </RelativeLayout>
-
-
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black">
-            <LinearLayout
-                android:gravity="start"
-                android:id="@+id/tileLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:id="@+id/id"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ROBOCOR 2020"
-                    android:textAllCaps="true"
-                    android:textColor="@color/graylight"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ROBOCOR 2020"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
 
-        </androidx.appcompat.widget.Toolbar>
+            </androidx.appcompat.widget.Toolbar>
 
 
-    </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/toolbar"
+                android:background="#ffffff"
+                android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerView"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <cn.iwgang.countdownview.CountdownView
+                    android:id="@+id/mycountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="9dp"
+                    app:isHideTimeBackground="false"
+                    app:isShowDay="true"
+                    app:isShowHour="true"
+                    app:isShowMillisecond="false"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:isShowTimeBgBorder="true"
+                    app:isTimeTextBold="true"
+                    app:suffixDay=" D "
+                    app:suffixGravity="center"
+                    app:suffixHour=" H "
+                    app:suffixMinute=" M "
+                    app:suffixSecond=" S "
+                    app:suffixTextColor="#000000"
+                    app:suffixTextSize="20sp"
+                    app:timeBgBorderRadius="8dp"
+                    app:timeBgColor="#000000"
+                    app:timeBgDivisionLineColor="#000000"
+                    app:timeBgRadius="8dp"
+                    app:timeTextColor="#ffffff"
+                    app:timeTextSize="32sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeLayout"
+                android:background="#ffffff">
+
+
+                <ViewFlipper
+                    android:id="@+id/view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:autoStart="true"
+                    android:flipInterval="3000"
+                    android:inAnimation="@android:anim/slide_in_left"
+                    android:outAnimation="@android:anim/slide_out_right">
+
+                    <ImageView
+                        android:id="@+id/i1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@mipmap/one" />
+
+                    <ImageView
+                        android:id="@+id/slide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@mipmap/two" />
+
+                    <ImageView
+                        android:id="@+id/slide1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@mipmap/three" />
+
+                    <ImageView
+                        android:id="@+id/slide2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:srcCompat="@mipmap/four" />
+
+                    <ImageView
+                        android:id="@+id/slide3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:srcCompat="@mipmap/five" />
+
+
+                </ViewFlipper>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/view_flipper"
+                    android:background="@drawable/robo"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    >
+
+<!--                    <Button-->
+<!--                        android:id="@+id/button2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#00000000"-->
+<!--                        />-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#00000000"-->
+<!--                        />-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
 
     </ScrollView>
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/navigationView"
-        app:menu="@menu/menu_item"
         android:layout_gravity="start"
-        app:headerLayout="@layout/header"/>
-
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu_item" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

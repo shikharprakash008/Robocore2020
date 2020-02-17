@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutCorsit"
-    android:background="@color/graylight">
+    android:background="#ffffff">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
-    <TextView
+    <me.biubiubiu.justifytext.library.JustifyTextView
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -72,9 +72,7 @@
         android:layout_below="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CORSIT is the premier robotics club of SIT, under the patronage of e-yantra cell of IIT Bombay working in the field of robotics to bring together like-minded individuals to share experience and have fun building robots. The club was established in year 2006 and since then it has organized various national level workshops as well as participated in various national level events. Our aim is to empower students with the possibility of getting their hands dirty and learning about robotics by practically doing it. It officially controls all the robotics activities carried out by SIT. Our Club members have actively participated in techfests all round the country including Techfest IIT Bombay, Kshitij IIT Kharagpur, Shastra IIT Madras, Pravega IISC among many others and have brought laurels to the club.
-
-Our club is the only one to have our labs set-up in collaboration with e-yantra cell of IIT Bombay in which our members build robots and projects on diverse topics including Machine Learning, Computer Vision, IOT, Embedded Systems, Blockchain among others."
+        android:text="@string/about_corsit"
 
         android:textSize="12sp"
         android:textStyle="bold"

@@ -19,9 +19,6 @@
             android:icon="@drawable/eventsone"
             android:title="Events"/>
 
-
-
-
         <item
             android:id="@+id/team"
             android:icon="@drawable/group"
@@ -33,12 +30,6 @@
             android:icon="@drawable/sponsor"
             android:title="Sponsors"
 
-            />
-
-        <item
-            android:id="@+id/register"
-            android:icon="@drawable/register"
-            android:title="Register"
             />
     </group>
     <item android:title="Communicate">
