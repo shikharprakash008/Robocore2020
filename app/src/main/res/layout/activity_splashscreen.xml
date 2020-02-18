@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,43 +10,45 @@
 
 
     <ImageView
+
         android:id="@+id/corsitlogo"
         android:layout_width="294dp"
-
         android:layout_height="309dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/splashcorsit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-       android:layout_centerHorizontal="true"
-        android:layout_marginBottom="262dp"
-        android:text="CORSIT"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/aldrich"
+        android:text="CORSIT"
         android:textColor="#fff"
         android:textSize="50sp"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/splashprogress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
-        android:layout_below="@+id/splashcorsit"
         android:id="@+id/splashprogress"
         android:layout_width="85dp"
         android:layout_height="114dp"
+        android:layout_below="@+id/splashcorsit"
         android:layout_alignTop="@+id/corsitlogo"
+        android:layout_marginBottom="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="166dp"
-
-        android:layout_marginLeft="166dp"
-        android:layout_marginTop="461dp"
-        android:layout_marginBottom="69dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.robocore;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -63,13 +64,22 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         initImageBitmaps();
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*videoView = findViewById(R.id.mVideoView);
+        videoView = findViewById(R.id.videoView_bg);
         setSupportActionBar(toolbar);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bg);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.mybg);
         videoView.setDrawingCacheEnabled(true);
         videoView.setVideoURI(uri);
         videoView.requestFocus();
-        videoView.start();*/
+        videoView.start();
+
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+
 
         //code for count dime timer
 
@@ -196,4 +206,22 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
        recyclerView.setAdapter(adapter);
 
    }
+
+    @Override
+    protected void onResume() {
+        videoView.resume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        videoView.suspend();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        videoView.stopPlayback();
+        super.onDestroy();
+    }
 }

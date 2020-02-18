@@ -21,7 +21,7 @@ public class splashscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        topanim= AnimationUtils.loadAnimation(this,R.anim.splashanimtop);
+        topanim = AnimationUtils.loadAnimation(this,R.anim.splashanimtop);
         bottomanim= AnimationUtils.loadAnimation(this,R.anim.splashanimbottom);
         image = findViewById(R.id.corsitlogo);
         logo = findViewById(R.id.splashcorsit);

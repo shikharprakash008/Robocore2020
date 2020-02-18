@@ -114,8 +114,6 @@ public class four_member_registration extends AppCompatActivity {
 
 
                 final String str_name1 = tiet_teamLeader_name.getText().toString().trim();
-
-                payusingupi(amounttxt, notetxt, upitxt, str_name1);
                 final String str_teamName = tiet_teamName.getText().toString().trim();
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();
@@ -235,6 +233,8 @@ public class four_member_registration extends AppCompatActivity {
 
                 DateFormat dftf = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss");
                 final String dateTime = dftf.format(Calendar.getInstance().getTime());
+
+                payusingupi(amounttxt, notetxt, upitxt, str_name1);
 
                 showLoadingDialog(v);
 
