@@ -33,6 +33,7 @@
             android:fontFamily="@font/aldrich"
             android:padding="5dp"
             android:text="Contact Us"
+
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="30dp" />
