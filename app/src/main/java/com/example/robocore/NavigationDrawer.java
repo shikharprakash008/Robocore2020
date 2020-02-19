@@ -36,7 +36,6 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
     Toolbar toolbar;
     NavigationView navigationView;
     VideoView videoView;
-    ScrollView scrollView;
 
     LinearLayout countDownLlayout;
     AnimationDrawable animationDrawable;
@@ -65,7 +64,6 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         navigationView.setNavigationItemSelectedListener(this);
 
         videoView = findViewById(R.id.videoView_bg);
-        setSupportActionBar(toolbar);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.mybg);
         videoView.setDrawingCacheEnabled(true);
         videoView.setVideoURI(uri);

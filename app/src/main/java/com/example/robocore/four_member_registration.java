@@ -1,10 +1,12 @@
 package com.example.robocore;
 
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -17,6 +19,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,8 +31,6 @@ import com.example.robocore.Reg.teamLeaderInfo_form;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
@@ -37,12 +38,21 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+
 public class four_member_registration extends AppCompatActivity {
 
+    VideoView videoView;
+
     ImageView iv_back;
-    FirebaseDatabase database;
-    DatabaseReference registration;
+
     final int UPI_PAYMENT = 0;
+
+    String str_teamName;
+
+    teamLeaderInfo_form teamLeaderInfo;
+    memberInfo_form member2Info, member3Info, member4Info;
+
+    String str_regEvent;
 
     TextInputEditText tiet_teamLeader_name, tiet_teamName, tiet_teamLeader_email, tiet_teamLeader_contact, tiet_teamLeader_college;
     TextInputEditText tiet_member2_name, tiet_member2_email, tiet_member2_contact;
@@ -50,7 +60,6 @@ public class four_member_registration extends AppCompatActivity {
     TextInputEditText tiet_member4_name, tiet_member4_email, tiet_member4_contact;
 
     CardView cvRegister;
-    FirebaseAuth mAuth;
     Dialog loadingDialog;
 
     @Override
@@ -58,18 +67,22 @@ public class four_member_registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four_member_registration);
 
+        videoView = findViewById(R.id.videoView_bg);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.mybg2);
+        videoView.setDrawingCacheEnabled(true);
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
 
-        mAuth = FirebaseAuth.getInstance();
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
         iv_back = (ImageView) findViewById(R.id.back);
 
-//        database = FirebaseDatabase.getInstance();
-//        registration = database.getReference("Registration");
-        // users=database.getReference("Users");
-
-        //PAYMENT INFORMATION
-
-
-        //payment end
 
         tiet_teamLeader_name = (TextInputEditText) findViewById(R.id.name1);
         ;
@@ -95,7 +108,7 @@ public class four_member_registration extends AppCompatActivity {
         loadingDialog = new Dialog(this);
 
 
-        final String str_regEvent = getIntent().getStringExtra("event");
+        str_regEvent = getIntent().getStringExtra("event");
 
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,60 +121,13 @@ public class four_member_registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String amounttxt = "1";
-                String notetxt = "Registration";
-                String upitxt = "8296668642@paytm";
-
-
                 final String str_name1 = tiet_teamLeader_name.getText().toString().trim();
-                final String str_teamName = tiet_teamName.getText().toString().trim();
+                str_teamName = tiet_teamName.getText().toString().trim();
                 final String str_email1 = tiet_teamLeader_email.getText().toString().trim();
                 final String str_contact1 = tiet_teamLeader_contact.getText().toString().trim();
                 final String str_college = tiet_teamLeader_college.getText().toString().trim();
                 final teamLeaderInfo_form four = new teamLeaderInfo_form(str_name1, str_teamName, str_email1, str_contact1, str_college);
-//
-//
-//                registration.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        if(dataSnapshot.child(four.getTeamLeader_name()).exists())
-//                            Toast.makeText(four_member_registration.this,"This name already exist",Toast.LENGTH_SHORT).show();
-//                        else {
-//                            registration.child(four.getTeamLeader_name()).setValue(four);
-//                            loadingDialog.dismiss();
-//                            Toast.makeText(four_member_registration.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
-//
-//
-//
-//
-//                mAuth.createUserWithEmailAndPassword(str_teamName, str_college).addOnCompleteListener(four_member_registration.this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//
-//                        if(task.isSuccessful()){
-//                            FirebaseUser user = mAuth.getCurrentUser();
-//                            Toast.makeText(four_member_registration.this, "You have been successfully registered", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(four_member_registration.this, MainActivity.class));
-//                        } else {
-//
-//                            Toast.makeText(four_member_registration.this, "Error in registry", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//
-//            }
-//        });
 
-//
-//
                 String str_name2 = tiet_member2_name.getText().toString().trim();
                 String str_email2 = tiet_member2_email.getText().toString().trim();
                 String str_contact2 = tiet_member2_contact.getText().toString().trim();
@@ -226,58 +192,178 @@ public class four_member_registration extends AppCompatActivity {
 
 
                 teamLeaderInfo_form teamLeaderInfo = new teamLeaderInfo_form(str_name1, str_teamName, str_email1, str_contact1, str_college);
-                final memberInfo_form member2Info = new memberInfo_form(str_name2, str_email2, str_contact2);
-                final memberInfo_form member3Info = new memberInfo_form(str_name3, str_email3, str_contact3);
-                final memberInfo_form member4Info = new memberInfo_form(str_name4, str_email4, str_contact4);
-                //  final teamLeaderInfo_form teamLeaderInfoForm =new teamLeaderInfo_form(str_name1,str_email1,str_college,str_contact1,str_college);
-
-                DateFormat dftf = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss");
-                final String dateTime = dftf.format(Calendar.getInstance().getTime());
-
-                payusingupi(amounttxt, notetxt, upitxt, str_name1);
+                member2Info = new memberInfo_form(str_name2, str_email2, str_contact2);
+                member3Info = new memberInfo_form(str_name3, str_email3, str_contact3);
+                member4Info = new memberInfo_form(str_name4, str_email4, str_contact4);
 
                 showLoadingDialog(v);
 
-                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        loadingDialog.dismiss();
-                        finish();
-                    }
-                });
-                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        loadingDialog.dismiss();
-                        finish();
-                    }
-                });
-                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member3Details").setValue(member3Info).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        loadingDialog.dismiss();
-                        finish();
-                    }
-                });
-                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member4Details").setValue(member4Info).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(four_member_registration.this, "Leader added successfully.", Toast.LENGTH_SHORT).show();
-                        loadingDialog.dismiss();
-                        finish();
-                    }
-                });
+                String amounttxt = "1";
+                String notetxt = str_teamName + ": " + str_regEvent;
+//                String upitxt = "dawood9055@okhdfcbank";
+                String upitxt = "8296668642@paytm";
 
+                payusingupi(amounttxt, notetxt, upitxt, str_name1);
 
-                Toast.makeText(four_member_registration.this, str_regEvent, Toast.LENGTH_SHORT).show();
+//                fnRegisterTeam();
 
             }
         });
 
     }
+
+
+    private void payusingupi(String amounttxt, String notetxt, String upitxt, String str_name1) {
+
+        Uri uri = Uri.parse("upi://pay").buildUpon()
+                .appendQueryParameter("pa", upitxt)
+                .appendQueryParameter("pn", str_name1)
+                .appendQueryParameter("tn", notetxt)
+                .appendQueryParameter("am", amounttxt)
+                .appendQueryParameter("cu", "INR")
+                .build();
+
+        Intent upiPayIntent = new Intent(Intent.ACTION_VIEW);
+        upiPayIntent.setData(uri);
+        // will always show a dialog to user to choose an app
+        Intent chooser = Intent.createChooser(upiPayIntent, "Pay with");
+        // check if intent resolves
+        if(null != chooser.resolveActivity(getPackageManager())) {
+            startActivityForResult(chooser, UPI_PAYMENT);
+        } else {
+            Toast.makeText(four_member_registration.this,"No UPI app found, please install one to continue",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.e("main ", "response "+resultCode );
+        /*
+       E/main: response -1
+       E/UPI: onActivityResult: txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612
+       E/UPIPAY: upiPaymentDataOperation: txnId=AXI4a3428ee58654a938811812c72c0df45&responseCode=00&Status=SUCCESS&txnRef=922118921612
+       E/UPI: payment successfull: 922118921612
+         */
+        switch (requestCode) {
+            case UPI_PAYMENT:
+                if ((RESULT_OK == resultCode) || (resultCode == 11)) {
+                    if (data != null) {
+                        String trxt = data.getStringExtra("response");
+                        Log.e("UPI", "onActivityResult: " + trxt);
+                        ArrayList<String> dataList = new ArrayList<>();
+                        dataList.add(trxt);
+                        upiPaymentDataOperation(dataList);
+                    } else {
+                        Log.e("UPI", "onActivityResult: " + "Return data is null");
+                        ArrayList<String> dataList = new ArrayList<>();
+                        dataList.add("nothing");
+                        upiPaymentDataOperation(dataList);
+                    }
+                } else {
+                    //when user simply back without payment
+                    Log.e("UPI", "onActivityResult: " + "Return data is null");
+                    ArrayList<String> dataList = new ArrayList<>();
+                    dataList.add("nothing");
+                    upiPaymentDataOperation(dataList);
+                }
+                break;
+        }
+    }
+    private void upiPaymentDataOperation(ArrayList<String> data) {
+        if (isConnectionAvailable(four_member_registration.this)) {
+            String str = data.get(0);
+            Log.e("UPIPAY", "upiPaymentDataOperation: "+str);
+            String paymentCancel = "";
+            if(str == null) str = "discard";
+            String status = "";
+            String approvalRefNo = "";
+            String response[] = str.split("&");
+            for (int i = 0; i < response.length; i++) {
+                String equalStr[] = response[i].split("=");
+                if(equalStr.length >= 2) {
+                    if (equalStr[0].toLowerCase().equals("Status".toLowerCase())) {
+                        status = equalStr[1].toLowerCase();
+                    }
+                    else if (equalStr[0].toLowerCase().equals("ApprovalRefNo".toLowerCase()) || equalStr[0].toLowerCase().equals("txnRef".toLowerCase())) {
+                        approvalRefNo = equalStr[1];
+                    }
+                }
+                else {
+                    paymentCancel = "Payment cancelled by user.";
+                }
+            }
+            if (status.equals("success")) {
+                //Code to handle successful transaction here.
+                Toast.makeText(four_member_registration.this, "Transaction successful.", Toast.LENGTH_SHORT).show();
+                Log.e("UPI", "payment successfull: "+approvalRefNo);
+                fnRegisterTeam();
+            }
+            else if("Payment cancelled by user.".equals(paymentCancel)) {
+                Toast.makeText(four_member_registration.this, "Payment cancelled by user.", Toast.LENGTH_SHORT).show();
+                Log.e("UPI", "Cancelled by user: "+approvalRefNo);
+                loadingDialog.dismiss();
+            }
+            else {
+                Toast.makeText(four_member_registration.this, "Transaction failed.Please try again", Toast.LENGTH_SHORT).show();
+                Log.e("UPI", "failed payment: "+approvalRefNo);
+                loadingDialog.dismiss();
+            }
+        } else {
+            Log.e("UPI", "Internet issue: ");
+            Toast.makeText(four_member_registration.this, "Internet connection is not available. Please check and try again", Toast.LENGTH_SHORT).show();
+            loadingDialog.dismiss();
+        }
+    }
+
+    private void fnRegisterTeam() {
+
+        DateFormat dftf = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss:SSS");
+        final String dateTime = dftf.format(Calendar.getInstance().getTime());
+
+        FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member2Details").setValue(member2Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member3Details").setValue(member3Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("member4Details").setValue(member4Info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(four_member_registration.this, str_teamName + " registered successfully.", Toast.LENGTH_SHORT).show();
+                                        loadingDialog.dismiss();
+                                        Intent i = new Intent(four_member_registration.this, qrCode.class);
+                                        i.putExtra("timestamp", str_teamName + ": " + dateTime );
+                                        i.putExtra("event", str_regEvent);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+    public static boolean isConnectionAvailable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo netInfo = connectivityManager.getActiveNetworkInfo();
+            if (netInfo != null && netInfo.isConnected()
+                    && netInfo.isConnectedOrConnecting()
+                    && netInfo.isAvailable()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
     //
@@ -302,115 +388,22 @@ public class four_member_registration extends AppCompatActivity {
 
     }
 
-
-    // payment start
-    private void payusingupi(String amounttxt, String notetxt, String upitxt, String str_name1) {
-
-        Uri uri = Uri.parse("upi://pay").buildUpon().appendQueryParameter("pa", upitxt)
-                .appendQueryParameter("pn", str_name1)
-                .appendQueryParameter("tn", notetxt)
-                .appendQueryParameter("am", amounttxt)
-                .appendQueryParameter("cu", "INR").build();
-
-        Intent upi_payment = new Intent(Intent.ACTION_VIEW);
-        upi_payment.setData(uri);
-        Intent chooser = Intent.createChooser(upi_payment, "pay with");
-        if (null != chooser.resolveActivity(getPackageManager())) {
-            startActivityForResult(chooser, UPI_PAYMENT);
-        } else {
-            Toast.makeText(this, "No upi app found", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void initializemethod() {
-
-        String amounttxt = "400";
-        String notetxt = "Registration";
-        String upitxt = "8296668642@paytm";
-
-
+    @Override
+    protected void onResume() {
+        videoView.resume();
+        super.onResume();
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case UPI_PAYMENT:
-                if ((RESULT_OK == resultCode || (resultCode == 11))) {
-                    if (data != null) {
-                        String txt = data.getStringExtra("response");
-                        Log.d("UPI", "onActivityResult:" + txt);
-                        ArrayList<String> dataLst = new ArrayList<>();
-                        dataLst.add("Nothing");
-                        upipaymentdataoperation(dataLst);
-                    } else {
-                        Log.d("UPI", "onActivityResult:" + "Return Data is null");
-                        ArrayList<String> dataLst = new ArrayList<>();
-                        dataLst.add("Nothing");
-                        upipaymentdataoperation(dataLst);
-
-                    }
-                } else {
-                    Log.d("UPI", "onActivityResult:" + "Return Data is null");
-                    ArrayList<String> dataLst = new ArrayList<>();
-                    dataLst.add("Nothing");
-                    upipaymentdataoperation(dataLst);
-                }
-                break;
-        }
+    protected void onPause() {
+        videoView.suspend();
+        super.onPause();
     }
 
-    private void upipaymentdataoperation(ArrayList<String> dataLst) {
-        if (isConnectionAvailable(four_member_registration.this)) {
-            String str = dataLst.get(0);
-            Log.d("UPIPAY", "upipaymentoperation:" + str);
-            String paymentCanel = "";
-            if (str == null) str = "discard";
-            String status = "";
-            String approvalref = "";
-            String response[] = str.split("&");
-            for (int i = 0; i < response.length; i++) {
-                String equalStr[] = response[i].split("=");
-                if (equalStr.length >= 2) {
-                    if (equalStr[0].toLowerCase().equals("Status".toLowerCase())) {
-                        status = equalStr[1].toLowerCase();
-                    } else if (equalStr[0].toLowerCase().equals("approval Ref".toLowerCase()) ||
-                            equalStr[0].toLowerCase().equals("txRef".toLowerCase())) {
-                        approvalref = equalStr[1];
-                    }
-
-                } else {
-                    paymentCanel = "payment cancel by user";
-                    if (status.equals("success")) {
-                        Toast.makeText(this, "Transaction Succesfull", Toast.LENGTH_SHORT).show();
-                        Log.d("UPI", "responsestr+" + approvalref);
-                    } else if ("Payment cancel by user".equals(paymentCanel)) {
-                        Toast.makeText(this, "Payment cancel by user", Toast.LENGTH_SHORT).show();
-
-
-                    } else {
-                        Toast.makeText(this, "Transaction failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-            }
-
-
-        } else {
-            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    protected void onDestroy() {
+        videoView.stopPlayback();
+        super.onDestroy();
     }
 
-    private boolean isConnectionAvailable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (connectivityManager != null) {
-            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-            if (networkInfo != null && networkInfo.isConnected() && networkInfo.isConnectedOrConnecting() && networkInfo.isAvailable()) {
-                return true;
-            }
-
-        }
-        return false;
-    }
-//payment end
 }

@@ -61,4 +61,6 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
 
 
+    //QRCODE
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
 }

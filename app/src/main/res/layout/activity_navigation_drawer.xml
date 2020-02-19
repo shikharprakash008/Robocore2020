@@ -72,7 +72,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/toolbar"
                 android:background="#00000000"
                 android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
@@ -90,8 +90,7 @@
                     android:id="@+id/mycountdown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="9dp"
+
                     app:isHideTimeBackground="false"
                     app:isShowDay="true"
                     app:isShowHour="true"
@@ -174,17 +173,17 @@
 
                 </ViewFlipper>
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@+id/view_flipper"
-                    android:alignmentMode="alignMargins"
-                    android:background="@drawable/robo"
-                    android:columnCount="2"
-                    android:rowCount="1">
+<!--                <GridLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_below="@+id/view_flipper"-->
+<!--                    android:alignmentMode="alignMargins"-->
+<!--                    android:background="@drawable/robo"-->
+<!--                    android:columnCount="2"-->
+<!--                    android:rowCount="1">-->
 
 
-                </GridLayout>
+<!--                </GridLayout>-->
 
 
             </RelativeLayout>
