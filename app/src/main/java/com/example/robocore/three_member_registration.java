@@ -53,6 +53,7 @@ public class three_member_registration extends AppCompatActivity {
     memberInfo_form member2Info, member3Info;
 
     String str_regEvent;
+    String str_eventFee;
 
     CardView cvRegister;
 
@@ -100,6 +101,7 @@ public class three_member_registration extends AppCompatActivity {
         loadingDialog = new Dialog(this);
 
         str_regEvent = getIntent().getStringExtra("event");
+        str_eventFee = getIntent().getStringExtra("fee");
 
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,7 +175,7 @@ public class three_member_registration extends AppCompatActivity {
 
                 showLoadingDialog(v);
 
-                String amounttxt = "1";
+                String amounttxt = str_eventFee;
                 String notetxt = str_teamName + ": " + str_regEvent;
 //                String upitxt = "dawood9055@okhdfcbank";
                 String upitxt = "8296668642@paytm";

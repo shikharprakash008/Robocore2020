@@ -54,36 +54,43 @@ public class Events extends AppCompatActivity {
                     case 1:
                         i = new Intent(Events.this, four_member_registration.class);
                         i.putExtra("event", "LineFollower");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 2:
                         i = new Intent(Events.this, four_member_registration.class);
                         i.putExtra("event", "RoboRace");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 3:
                         i = new Intent(Events.this, four_member_registration.class);
                         i.putExtra("event", "CrossRoads");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 4:
                         i = new Intent(Events.this, four_member_registration.class);
                         i.putExtra("event", "RoboSoccer");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 5:
                         i = new Intent(Events.this, two_member_registration.class);
                         i.putExtra("event", "PaperPresentation");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 6:
                         i = new Intent(Events.this, two_member_registration.class);
                         i.putExtra("event", "DCode");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     case 7:
                         i = new Intent(Events.this, three_member_registration.class);
                         i.putExtra("event", "ArduinoClash");
+                        i.putExtra("fee", "1");
                         startActivity(i);
                         break;
                     default:

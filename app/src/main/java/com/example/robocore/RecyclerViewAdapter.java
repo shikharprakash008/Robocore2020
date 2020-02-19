@@ -59,36 +59,43 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     case "Line Follower":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "LineFollower");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "Cross Roads":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "CrossRoads");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "RoboRash":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "RoboRace");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "Paper":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "PaperPresentation");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "Robo Soccer":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "RoboSoccer");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "D-Code":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "DCode");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     case "Arduino Clash":
                         i = new Intent(mContext, three_member_registration.class);
                         i.putExtra("event", "ArduinoClash");
+                        i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
                     default:

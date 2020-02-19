@@ -53,6 +53,7 @@ public class four_member_registration extends AppCompatActivity {
     memberInfo_form member2Info, member3Info, member4Info;
 
     String str_regEvent;
+    String str_eventFee;
 
     TextInputEditText tiet_teamLeader_name, tiet_teamName, tiet_teamLeader_email, tiet_teamLeader_contact, tiet_teamLeader_college;
     TextInputEditText tiet_member2_name, tiet_member2_email, tiet_member2_contact;
@@ -109,6 +110,7 @@ public class four_member_registration extends AppCompatActivity {
 
 
         str_regEvent = getIntent().getStringExtra("event");
+        str_eventFee = getIntent().getStringExtra("fee");
 
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,7 +200,7 @@ public class four_member_registration extends AppCompatActivity {
 
                 showLoadingDialog(v);
 
-                String amounttxt = "1";
+                String amounttxt = str_eventFee;
                 String notetxt = str_teamName + ": " + str_regEvent;
 //                String upitxt = "dawood9055@okhdfcbank";
                 String upitxt = "8296668642@paytm";

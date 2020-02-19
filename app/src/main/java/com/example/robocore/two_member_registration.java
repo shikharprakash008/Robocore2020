@@ -45,6 +45,7 @@ public class two_member_registration extends AppCompatActivity {
     ImageView iv_back;
 
     String str_teamName;
+    String str_eventFee;
 
     teamLeaderInfo_form teamLeaderInfo;
     memberInfo_form memberInfo;
@@ -96,6 +97,7 @@ public class two_member_registration extends AppCompatActivity {
         loadingDialog = new Dialog(this);
 
         str_regEvent = getIntent().getStringExtra("event");
+        str_eventFee = getIntent().getStringExtra("fee");
 
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,7 +159,7 @@ public class two_member_registration extends AppCompatActivity {
 
                 showLoadingDialog(v);
 
-                String amounttxt = "1";
+                String amounttxt = str_eventFee;
                 String notetxt = str_teamName + ": " + str_regEvent;
 //                String upitxt = "dawood9055@okhdfcbank";
 //                String upitxt = "kaisarshabirdar@oksbi";
