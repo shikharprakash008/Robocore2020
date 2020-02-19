@@ -5,7 +5,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -199,13 +198,16 @@ public class three_member_registration extends AppCompatActivity {
                 .appendQueryParameter("cu", "INR")
                 .build();
 
-        String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
-        int GOOGLE_PAY_REQUEST_CODE = 123;
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(uri);
-        intent.setPackage(GOOGLE_PAY_PACKAGE_NAME);
-        Activity activity = three_member_registration.this;
-        activity.startActivityForResult(intent, GOOGLE_PAY_REQUEST_CODE);
+        Intent upiPayIntent = new Intent(Intent.ACTION_VIEW);
+        upiPayIntent.setData(uri);
+        // will always show a dialog to user to choose an app
+        Intent chooser = Intent.createChooser(upiPayIntent, "Pay with");
+        // check if intent resolves
+        if (null != chooser.resolveActivity(getPackageManager())) {
+            startActivityForResult(chooser, UPI_PAYMENT);
+        } else {
+            Toast.makeText(three_member_registration.this, "No UPI app found, please install one to continue", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -220,7 +222,7 @@ public class three_member_registration extends AppCompatActivity {
        E/UPI: payment successfull: 922118921612
          */
         switch (requestCode) {
-            case UPI_PAYMENT:
+            case 123:
                 if ((RESULT_OK == resultCode) || (resultCode == 11)) {
                     if (data != null) {
                         String trxt = data.getStringExtra("response");

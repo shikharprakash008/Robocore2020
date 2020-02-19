@@ -1,7 +1,6 @@
 package com.example.robocore;
 
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -226,13 +225,13 @@ public class four_member_registration extends AppCompatActivity {
                 .appendQueryParameter("cu", "INR")
                 .build();
 
+
         String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
         int GOOGLE_PAY_REQUEST_CODE = 123;
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);
         intent.setPackage(GOOGLE_PAY_PACKAGE_NAME);
-        Activity activity = four_member_registration.this;
-        activity.startActivityForResult(intent, GOOGLE_PAY_REQUEST_CODE);
+        startActivityForResult(intent, GOOGLE_PAY_REQUEST_CODE);
 
     }
 
@@ -247,7 +246,7 @@ public class four_member_registration extends AppCompatActivity {
        E/UPI: payment successfull: 922118921612
          */
         switch (requestCode) {
-            case UPI_PAYMENT:
+            case 123:
                 if ((RESULT_OK == resultCode) || (resultCode == 11)) {
                     if (data != null) {
                         String trxt = data.getStringExtra("response");
