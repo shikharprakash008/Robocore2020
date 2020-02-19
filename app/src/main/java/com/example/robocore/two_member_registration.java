@@ -159,9 +159,9 @@ public class two_member_registration extends AppCompatActivity {
 
                 String amounttxt = "1";
                 String notetxt = str_teamName + ": " + str_regEvent;
-                String upitxt = "dawood9055@okhdfcbank";
+//                String upitxt = "dawood9055@okhdfcbank";
 //                String upitxt = "kaisarshabirdar@oksbi";
-//                String upitxt = "8296668642@paytm";
+                String upitxt = "8296668642@paytm";
 
                 payusingupi(amounttxt, notetxt, upitxt, str_name1);
 

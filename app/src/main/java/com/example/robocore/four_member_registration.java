@@ -306,7 +306,7 @@ public class four_member_registration extends AppCompatActivity {
                 loadingDialog.dismiss();
             }
             else {
-                Toast.makeText(four_member_registration.this, "Transaction failed.Please try again", Toast.LENGTH_SHORT).show();
+                Toast.makeText(four_member_registration.this, "Transaction failed. Please try again.", Toast.LENGTH_SHORT).show();
                 Log.e("UPI", "failed payment: "+approvalRefNo);
                 loadingDialog.dismiss();
             }

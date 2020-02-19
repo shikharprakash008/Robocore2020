@@ -7,9 +7,12 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -44,6 +47,10 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
     ActionBarDrawerToggle toggle;
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageUrls=new ArrayList<>();
+
+
+    Button left, right;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,16 +85,26 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         });
 
 
+        left = (Button) findViewById(R.id.btn_left);
+        right = (Button) findViewById(R.id.btn_right);
 
-        //code for count dime timer
+        left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(NavigationDrawer.this, "LEFT SIDE CLICKED", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(NavigationDrawer.this, sponsors.class));
+                return;
+            }
+        });
 
-        //scrollView= (ScrollView) findViewById(R.id.scroll);
-
-        //animationDrawable = (AnimationDrawable) scrollView.getBackground();
-
-        //animationDrawable.setEnterFadeDuration(4500);
-       // animationDrawable.setExitFadeDuration(4500);
-        //animationDrawable.start();
+        right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(NavigationDrawer.this, "RIGHT SIDE CLICKED", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(NavigationDrawer.this, newSponsers.class));
+                return;
+            }
+        });
 
 
         mCvCountdownView = findViewById(R.id.mycountdown);
