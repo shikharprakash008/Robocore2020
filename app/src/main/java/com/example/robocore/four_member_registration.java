@@ -3,6 +3,7 @@ package com.example.robocore;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -23,6 +24,7 @@ import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -45,7 +47,7 @@ public class four_member_registration extends AppCompatActivity {
 
     ImageView iv_back;
 
-    final int UPI_PAYMENT = 0;
+    final int GOOGLE_PAY_REQUEST_CODE = 123;
 
     String str_teamName;
 
@@ -147,8 +149,17 @@ public class four_member_registration extends AppCompatActivity {
                     Toast.makeText(four_member_registration.this, "Enter team leader's name.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(str_teamName)) {
-                    Toast.makeText(four_member_registration.this, "Team name cann't be empty.", Toast.LENGTH_SHORT).show();
+                if (!fnFirebaseDatabaseRefCheck(str_teamName)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(four_member_registration.this);
+                    builder.setMessage("Enter a valid team name.\nTeam name contains only alphabets and digits.")
+                            .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    AlertDialog alert = builder.create();
+                    alert.show();
                     return;
                 }
                 if (TextUtils.isEmpty(str_email1)) {
@@ -205,9 +216,9 @@ public class four_member_registration extends AppCompatActivity {
 //                String upitxt = "dawood9055@okhdfcbank";
                 String upitxt = "8296668642@paytm";
 
-                payusingupi(amounttxt, notetxt, upitxt, str_name1);
-
-//                fnRegisterTeam();
+//                payusingupi(amounttxt, notetxt, upitxt, str_name1);
+//
+                fnRegisterTeam();
 
             }
         });
@@ -227,7 +238,6 @@ public class four_member_registration extends AppCompatActivity {
 
 
         String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
-        int GOOGLE_PAY_REQUEST_CODE = 123;
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);
         intent.setPackage(GOOGLE_PAY_PACKAGE_NAME);
@@ -403,6 +413,10 @@ public class four_member_registration extends AppCompatActivity {
     protected void onDestroy() {
         videoView.stopPlayback();
         super.onDestroy();
+    }
+
+    public boolean fnFirebaseDatabaseRefCheck(String name) {
+        return name.matches("[a-zA-Z0-9]+");
     }
 
 }

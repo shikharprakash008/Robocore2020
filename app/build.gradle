@@ -63,4 +63,9 @@ dependencies {
 
     //QRCODE
     implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+
+    //geo location
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+
 }

@@ -55,9 +55,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent i;
 
                 switch (holder.textView.getText().toString()) {
-                    case "Line Follower":
+                    case "Situation 2.0":
                         i = new Intent(mContext, four_member_registration.class);
-                        i.putExtra("event", "LineFollower");
+                        i.putExtra("event", "Situation");
                         i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
@@ -67,13 +67,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
-                    case "RoboRash":
+                    case "Rugged Rage":
                         i = new Intent(mContext, four_member_registration.class);
-                        i.putExtra("event", "RoboRace");
+                        i.putExtra("event", "RuggedRage");
                         i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;
-                    case "Paper":
+                    case "Paper Presentation":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "PaperPresentation");
                         i.putExtra("fee", "1");
@@ -94,6 +94,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     case "Arduino Clash":
                         i = new Intent(mContext, three_member_registration.class);
                         i.putExtra("event", "ArduinoClash");
+                        i.putExtra("fee", "1");
+                        mContext.startActivity(i);
+                        break;
+                    case "Project Symposium":
+                        i = new Intent(mContext, four_member_registration.class);
+                        i.putExtra("event", "ProjectSymposium");
                         i.putExtra("fee", "1");
                         mContext.startActivity(i);
                         break;

@@ -2,6 +2,7 @@ package com.example.robocore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.media.MediaPlayer;
@@ -13,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.zxing.WriterException;
@@ -25,7 +27,7 @@ public class qrCode extends AppCompatActivity {
     VideoView videoView;
 
     String TAG = "GenerateQRCode";
-    EditText edtValue;
+    String eventName;
     ImageView qrImage;
     String inputValue;
     Bitmap bitmap;
@@ -37,11 +39,41 @@ public class qrCode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code);
 
+        eventName = getIntent().getStringExtra("event");
         inputValue = getIntent().getStringExtra("timestamp");
+
+        switch (eventName) {
+            case "Situation":
+                eventName = "Situation 2.0";
+                break;
+            case "CrossRoads":
+                eventName = "Cross Roads";
+                break;
+            case "RuggedRage":
+                eventName = "Rugged Rage";
+                break;
+            case "PaperPresentation":
+                eventName = "Paper Presentation";
+                break;
+            case "RoboSoccer":
+                eventName = "Robo Soccer";
+                break;
+            case "DCode":
+                eventName = "D-Code";
+                break;
+            case "ArduinoClash":
+                eventName = "Arduino Clash";
+                break;
+            case "ProjectSymposium":
+                eventName = "Project Symposium";
+                break;
+            default:
+                Toast.makeText(qrCode.this, "Sonething went wrong.", Toast.LENGTH_SHORT).show();
+        }
 
         tv = (TextView) findViewById(R.id.tv_event);
 
-        tv.setText(getIntent().getStringExtra("event"));
+        tv.setText(eventName);
 
         videoView = findViewById(R.id.videoView_bg);
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.mybg);

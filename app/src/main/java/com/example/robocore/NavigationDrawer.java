@@ -31,6 +31,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import cn.iwgang.countdownview.CountdownView;
 
@@ -47,6 +48,8 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
     ActionBarDrawerToggle toggle;
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageUrls=new ArrayList<>();
+
+    double latitude = 13.3269873, longitude = 99.1246795;
 
 
     Button left, right;
@@ -101,8 +104,18 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
             @Override
             public void onClick(View v) {
                 //Toast.makeText(NavigationDrawer.this, "RIGHT SIDE CLICKED", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(NavigationDrawer.this, newSponsers.class));
-                return;
+                AlertDialog.Builder builder = new AlertDialog.Builder(NavigationDrawer.this);
+                builder.setMessage("Coming Soon!")
+                        .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+//                startActivity(new Intent(NavigationDrawer.this, newSponsers.class));
+//                return;
             }
         });
 
@@ -111,7 +124,7 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        String countDate = "06-03-2020 00:00:00";
+        String countDate = "07-03-2020 00:00:00";
         Date now = new Date();
 
 
@@ -149,17 +162,14 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
                 startActivity(i);
                 break;
             case R.id.Location:
-                Uri gmmIntentUri = Uri.parse("geo:13.3269° N, 77.1261° E");
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                if (mapIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(mapIntent);
-                    finish();
-                }
+                String uri = String.format(Locale.ENGLISH, "geo:%f,%f", latitude, longitude);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(intent);
                 break;
-            case R.id.sponsors:
-                i= new Intent(NavigationDrawer.this,sponsors.class);
-                startActivity(i);
+            case R.id.rulebook:
+                Intent browse = new Intent(Intent.ACTION_VIEW);
+                browse.setData(Uri.parse("https://drive.google.com/file/d/1avuQWJEJGFB29GXhxeaDVIEkguNDpPXy/view?usp=sharing"));
+                startActivity(browse);
                 break;
             case R.id.item_robocor:
 
@@ -171,7 +181,7 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
 
             case R.id.item_sessions:
                 AlertDialog.Builder builder = new AlertDialog.Builder(NavigationDrawer.this);
-                builder.setMessage("You do not have access to it!")
+                builder.setMessage("Coming Soon!")
                         .setPositiveButton("Close", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -194,20 +204,22 @@ public class NavigationDrawer extends AppCompatActivity implements  NavigationVi
         return true;
     }
     private void initImageBitmaps(){
-        mImageUrls.add(R.mipmap.lfrone);
-        mNames.add("Line Follower");
-        mImageUrls.add(R.mipmap.robo);
+        mImageUrls.add(R.mipmap.lfr);
+        mNames.add("Situation 2.0");
+        mImageUrls.add(R.mipmap.crossroads);
         mNames.add("Cross Roads");
-        mImageUrls.add(R.mipmap.roborace);
-        mNames.add("RoboRash");
+        mImageUrls.add(R.mipmap.robo);
+        mNames.add("Rugged Rage");
         mImageUrls.add(R.mipmap.ppr);
-        mNames.add("Paper");
+        mNames.add("Paper Presentation");
         mImageUrls.add(R.mipmap.robosoccer);
         mNames.add("Robo Soccer");
-        mImageUrls.add(R.mipmap.coding);
+        mImageUrls.add(R.mipmap.decode);
         mNames.add("D-Code");
-        mImageUrls.add(R.drawable.arduino);
+        mImageUrls.add(R.mipmap.duno);
         mNames.add("Arduino Clash");
+        mImageUrls.add(R.mipmap.project);
+        mNames.add("Project Symposium");
 
 
         initRecyclerView();

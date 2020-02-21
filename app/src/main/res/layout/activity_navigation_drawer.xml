@@ -41,7 +41,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ffffff">
+                android:background="#99000000">
 
                 <LinearLayout
                     android:id="@+id/tileLayout"
@@ -58,7 +58,7 @@
                         android:layout_marginTop="10dp"
                         android:text="ROBOCOR 2020"
                         android:textAllCaps="true"
-                        android:textColor="@color/black"
+                        android:textColor="#ffffff"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
