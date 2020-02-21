@@ -58,49 +58,49 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     case "Situation 2.0":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "Situation");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "400");
                         mContext.startActivity(i);
                         break;
                     case "Cross Roads":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "CrossRoads");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "400");
                         mContext.startActivity(i);
                         break;
                     case "Rugged Rage":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "RuggedRage");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "400");
                         mContext.startActivity(i);
                         break;
                     case "Paper Presentation":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "PaperPresentation");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "150");
                         mContext.startActivity(i);
                         break;
                     case "Robo Soccer":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "RoboSoccer");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "400");
                         mContext.startActivity(i);
                         break;
                     case "D-Code":
                         i = new Intent(mContext, two_member_registration.class);
                         i.putExtra("event", "DCode");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "100");
                         mContext.startActivity(i);
                         break;
                     case "Arduino Clash":
                         i = new Intent(mContext, three_member_registration.class);
                         i.putExtra("event", "ArduinoClash");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "200");
                         mContext.startActivity(i);
                         break;
                     case "Project Symposium":
                         i = new Intent(mContext, four_member_registration.class);
                         i.putExtra("event", "ProjectSymposium");
-                        i.putExtra("fee", "1");
+                        i.putExtra("fee", "400");
                         mContext.startActivity(i);
                         break;
                     default:

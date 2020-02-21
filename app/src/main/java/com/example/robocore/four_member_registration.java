@@ -214,11 +214,11 @@ public class four_member_registration extends AppCompatActivity {
                 String amounttxt = str_eventFee;
                 String notetxt = str_teamName + ": " + str_regEvent;
 //                String upitxt = "dawood9055@okhdfcbank";
-                String upitxt = "8296668642@paytm";
+                String upitxt = "anushant.2k16-1@okaxis";
 
-//                payusingupi(amounttxt, notetxt, upitxt, str_name1);
-//
-                fnRegisterTeam();
+  // payusingupi(amounttxt, notetxt, upitxt, str_name1);
+
+              fnRegisterTeam();
 
             }
         });
@@ -329,6 +329,7 @@ public class four_member_registration extends AppCompatActivity {
     private void fnRegisterTeam() {
 
         DateFormat dftf = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss:SSS");
+       // final  String dateTime=dftf.format();
         final String dateTime = dftf.format(Calendar.getInstance().getTime());
 
         FirebaseDatabase.getInstance().getReference("Registrations").child(str_regEvent).child(dateTime).child(str_teamName).child("leaderDetails").setValue(teamLeaderInfo).addOnCompleteListener(new OnCompleteListener<Void>() {

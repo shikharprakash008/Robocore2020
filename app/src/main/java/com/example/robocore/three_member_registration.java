@@ -189,10 +189,10 @@ public class three_member_registration extends AppCompatActivity {
                 String amounttxt = str_eventFee;
                 String notetxt = str_teamName + ": " + str_regEvent;
 //                String upitxt = "dawood9055@okhdfcbank";
-                String upitxt = "8296668642@paytm";
+                String upitxt = "anushant.2k16-1@okaxis";
 
-//                payusingupi(amounttxt, notetxt, upitxt, str_name1);
-                fnRegisterTeam();
+//               payusingupi(amounttxt, notetxt, upitxt, str_name1);
+               fnRegisterTeam();
 
             }
         });
