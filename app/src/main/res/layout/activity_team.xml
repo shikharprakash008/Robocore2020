@@ -34,6 +34,8 @@
     app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
     <ScrollView
+        android:foregroundGravity="fill_vertical"
+        android:maxHeight="1000dp"
         android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -41,7 +43,6 @@
 
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
@@ -123,6 +124,8 @@
                                 android:src="@mipmap/pankaj"/>
 
                             <TextView
+                                android:id="@+id/pankaj_text"
+                                android:gravity="center"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center"
                                 android:layout_width="wrap_content"
@@ -130,6 +133,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Pankaj"/>
                             <TextView
+                                android:id="@+id/des_pankaj"
                                 android:text="Vice Chairman"
                                 android:layout_gravity="center"
                                 android:gravity="center"
@@ -262,7 +266,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Amit"/>
                             <TextView
-                                android:text="Graphics Designer"
+                                android:text="Senior Member"
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textColor="@color/black"
@@ -478,7 +482,7 @@
                         android:layout_width="wrap_content"
                         android:textColor="@color/black"
                         android:layout_height="wrap_content"
-                        android:text="Hrijusah"/>
+                        android:text="Hrijusha"/>
                     <TextView
                         android:text="Senior Member"
                         android:layout_gravity="center"
@@ -649,7 +653,7 @@
                             android:layout_width="wrap_content"
                             android:textColor="@color/black"
                             android:layout_height="wrap_content"
-                            android:text="Sonakashi"/>
+                            android:text="Sonakshi"/>
                         <TextView
                             android:text="Senior Member"
                             android:layout_gravity="center"

@@ -43,7 +43,7 @@
             <item
                 android:id="@+id/item_competitions"
                 android:icon="@drawable/competitions"
-                android:title="Compititions"
+                android:title="Competition"
                 />
             <item
                 android:id="@+id/item_sessions"

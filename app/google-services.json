@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1083323174908:android:85a9c5fa99d97aba63ac79",
+        "android_client_info": {
+          "package_name": "com.corsit.robocore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083323174908-lfhk8c6dkrg9msthc74oltcujbndsfru.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.corsit.robocore",
+            "certificate_hash": "0b27b1cbe653bc6f68f4725d4f1af1f01bf62418"
+          }
+        },
+        {
+          "client_id": "1083323174908-b505ev449ft1k2edt9pigcm6nim7m9vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhbCa0gCDYROKnLHdfm-khPkx-79FQECs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083323174908-b505ev449ft1k2edt9pigcm6nim7m9vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1083323174908:android:67cdff3e44bca21a63ac79",
         "android_client_info": {
           "package_name": "com.example.robocore"

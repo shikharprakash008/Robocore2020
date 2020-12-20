@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.robocore">
+    package="com.corsit.robocore">
 
     <dist:module dist:instant="true" />
 
@@ -16,33 +16,33 @@
         android:roundIcon="@mipmap/robocorelogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newSponsers"></activity>
-        <activity android:name=".qrCode" />
+        <activity android:name="com.corsit.robocore.newSponsers"></activity>
+        <activity android:name="com.corsit.robocore.qrCode" />
         <activity
-            android:name=".aboutPopUpRobocor"
+            android:name="com.corsit.robocore.aboutPopUpRobocor"
             android:theme="@style/AppTheme.PopUpTheme" />
         <activity
-            android:name=".aboutPopUp"
+            android:name="com.corsit.robocore.aboutPopUp"
             android:theme="@style/AppTheme.PopUpTheme" />
-        <activity android:name=".two_member_registration" />
-        <activity android:name=".three_member_registration" />
-        <activity android:name=".four_member_registration" />
-        <activity android:name=".ConatactUs" />
-        <activity android:name=".sponsors" />
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".Team" />
-        <activity android:name=".Events" />
-        <activity android:name=".AboutRobocore" />
-        <activity android:name=".AboutCorsit" />
-        <activity android:name=".NavigationDrawer" />
-        <activity android:name=".splashscreen">
+        <activity android:name="com.corsit.robocore.two_member_registration" />
+        <activity android:name="com.corsit.robocore.three_member_registration" />
+        <activity android:name="com.corsit.robocore.four_member_registration" />
+        <activity android:name="com.corsit.robocore.ConatactUs" />
+        <activity android:name="com.corsit.robocore.sponsors" />
+        <activity android:name="com.corsit.robocore.WelcomeActivity" />
+        <activity android:name="com.corsit.robocore.Team" />
+        <activity android:name="com.corsit.robocore.Events" />
+        <activity android:name="com.corsit.robocore.AboutRobocore" />
+        <activity android:name="com.corsit.robocore.AboutCorsit" />
+        <activity android:name="com.corsit.robocore.NavigationDrawer" />
+        <activity android:name="com.corsit.robocore.splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.corsit.robocore.MainActivity" />
     </application>
 
 </manifest>
